@@ -12,6 +12,8 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/league-gothic": "^5.0.20",
+    "@fontsource/lekton": "^5.0.14",
     "@fontsource/twinkle-star": "^5.0.20",
     "astro": "^4.10.1",
     "tailwindcss": "^3.4.4",

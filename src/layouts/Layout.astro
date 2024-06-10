@@ -1,6 +1,5 @@
 ---
-// import "@fontsource/lekton/400.css";
-// import "@fontsource/lekton/700.css";
+import "@fontsource/lekton";
 
 interface Props {
 	title: string;
@@ -17,39 +16,42 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Raul Cano</title>
 	</head>
-		<body>
-			<slot />
-		</body>
+	<body>
+		<slot />
+		<div class="cursor"></div>
+		<script>
+			const cursor = document.querySelector(".cursor");
+			document.addEventListener("mousemove", (e) => {
+				cursor.style.left = e.pageX + "px";
+				cursor.style.top = e.pageY + "px";
+			});
+		</script>
+	</body>
 	<style is:global>
 		:root {
 			--white: #ffffff;
 			--dark: #000000;
 			--gray: #333333;
 			--light-gray: #f5f5f5;
-			/* --primary: #00f335;
-		--secondary: #ff0080;
-		--accent: #79ffe1; */
 			--background: var(--dark);
 			--text: var(--white);
-			/* --link: var(--primary);*/
 			--lines: rgba(255, 255, 255, 0.5);
 		}
 		html {
 			font-size: 16px;
 			font-family:
-				"Lekton",
-				Monaco,
+				 Monaco,
 				Lucida Console,
 				"Courier New",
 				Courier,
 				monospace;
 			background: #000000;
-			/* letter-spacing: -0.025rem; */
+			letter-spacing: -0.025rem;
 			scroll-behavior: smooth;
+			cursor: none;
 		}
-
 		body,
 		figure {
 			margin: 0;
@@ -110,6 +112,22 @@ const { title } = Astro.props;
 			line-height: 1.5;
 			margin: 0;
 			text-wrap: pretty;
+		}
+
+		/* CURSOR STYLES */
+		.cursor {
+			position: fixed;
+			width: 20px;
+			background-color: white;
+			height: 20px;
+			border-radius: 50%;
+			transition: 0.1s;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+			mix-blend-mode: difference;
+		}
+		p:hover ~ .cursor {
+			transform: scale(6);
 		}
 	</style>
 </html>
