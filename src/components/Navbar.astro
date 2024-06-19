@@ -4,59 +4,59 @@
 
 <nav class="navbar">
 	<div class="navbar__container">
-		<div>
-			<a class="navbar__link-about" href="#about">
-				<!-- Triangle -->
-				<svg
-					width="34"
-					height="32"
-					viewBox="0 0 34 32"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M1.37081 31L17 1.07991L32.6292 31H1.37081Z"
-						stroke="white"></path>
-				</svg>
-        </a>
+		<div class="navbar__left-side">
+			<div class="navbar__home">
+				<a class="navbar__home--link">Home</a>
+			</div>
 		</div>
-		<div>
-			<a class="navbar__link-projects" href="#projects">
-				<!-- Circle -->
-				<svg
-					width="32"
-					height="32"
-					viewBox="0 0 32 32"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<circle cx="16" cy="16" r="15.5" stroke="white"></circle>
-				</svg>
-			</a>
-		</div>
-		<div>
-			<a class="navbar__link-contact" href="#contact">
-				<!-- Square -->
-				<svg
-					width="32"
-					height="32"
-					viewBox="0 0 32 32"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<rect x="0.5" y="0.5" width="31" height="31" stroke="white"
-					></rect>
-				</svg>
-			</a>
+
+		<div class="navbar__right-side">
+			<div class="navbar__blog">
+				<a href="/blogs/" class="navbar__blog--link">Blog</a>
+			</div>
+			<div class="navbar__projects">
+				<a class="navbar__projects--link">Projects</a>
+			</div>
+			<div class="navbar__contact">
+				<a class="navbar__contact--link">Contact</a>
+			</div>
 		</div>
 	</div>
-	
 </nav>
 
 <style>
 	.navbar__container {
-		color: white;
-		padding-bottom: 2rem;
-		padding-top: 2rem;
+		color: var(--text);
+		padding: 0.5rem;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
+		border: 1px solid var(--white);
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.navbar__left-side {
+	}
+	.navbar__right-side {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+	}
+
+	.navbar__logo {
+		text-transform: lowercase;
+	}
+
+	.navbar__blog,
+	.navbar__contact,
+	.navbar__projects {
+	}
+	
+	.navbar__home--link:hover, 
+	.navbar__blog--link:hover,
+	.navbar__projects--link:hover,
+	.navbar__contact--link:hover{
+		text-decoration: underline;
 	}
 </style>

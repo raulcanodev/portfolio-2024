@@ -6,7 +6,7 @@ import type { CollectionEntry } from "astro:content";
 const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
 ---
 
-<Layout title="posts">
+<Layout title="Blogs - Raul Cano">
 	<h1>ded</h1>
   {allBlog.map(post =>(
     <p class="uppercase">{post.data.title}</p>
