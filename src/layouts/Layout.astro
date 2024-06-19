@@ -5,7 +5,7 @@ interface Props {
 	title: string;
 }
 
-const { title } = Astro.props;
+const { title = 'Raul Cano' } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Raul Cano</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -127,7 +127,7 @@ const { title } = Astro.props;
 			mix-blend-mode: difference;
 		}
 		p:hover ~ .cursor {
-			transform: scale(6);
+			transform: scale(2);
 		}
 	</style>
 </html>
