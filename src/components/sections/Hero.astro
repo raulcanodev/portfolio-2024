@@ -1,6 +1,7 @@
 ---
 import { content } from "@content_en";
 import { Image } from "astro:assets";
+import Preview from "@/components/blog/Preview.astro";
 
 const { summary } = content.basics;
 ---
@@ -38,6 +39,9 @@ const { summary } = content.basics;
 			</div>
 		</div>
 	</div>
+	<Preview title="test" author="ef" emoji="fe" votes="3"/>
+	<Preview title="test" author="ef" emoji="fe" votes="3"/>
+	<Preview title="test" author="ef" emoji="fe" votes="3"/>
 </section>
 
 <style>
