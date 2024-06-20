@@ -1,12 +1,22 @@
 {
-	"extends": "astro/tsconfigs/strict",
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@content_en": ["./content_en.ts"],
-			"@content_es": ["./content_es.json"],
-			"@content_pt": ["./content_pt.json"],
-			"@/*": ["src/*"]
-		}
-	}
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@content_en": [
+        "./content_en.ts"
+      ],
+      "@content_es": [
+        "./content_es.json"
+      ],
+      "@content_pt": [
+        "./content_pt.json"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

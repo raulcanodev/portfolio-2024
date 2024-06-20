@@ -3,19 +3,17 @@ import { content } from "@content_en";
 import { Image } from "astro:assets";
 import Preview from "@/components/blog/Preview.astro";
 
-const { summary } = content.basics;
+const { name } = content.basics;
 ---
 
-<section id="about">
-	<div class="about__container">
-		<div class="about__left-side">
-			<div class="about__title">
-				<span class="about__title--title">Raul Cano</span><span
-					class="about__title--description">Jr. Full Stack</span
-				>
+<section id="about" class="mt-28 mb-28">
+	<div class="flex items-center justify-between">
+		<div class="flex-1">
+			<div class="font-bold">
+				<h1 class="text-lg">{name}</h1>
 			</div>
-			<div class="about__description">
-				<p>
+			<div class="mt-4">
+				<p class="text-base leading-relaxed">
 					Junior full stack developer specialized in web development,
 					I'm 27 years old and I live in Lisbon. My mother says that I
 					developed this love for programming because when I was a
@@ -24,10 +22,10 @@ const { summary } = content.basics;
 				</p>
 			</div>
 		</div>
-		<div class="about__right-side">
-			<div class="about__img-container">
+		<div>
+			<div class="w-52 h-64 relative">
 				<Image
-					class="about__img"
+					class="w-full h-full object-cover"
 					src="/raul.png"
 					alt="A bird."
 					width="200"
@@ -39,44 +37,4 @@ const { summary } = content.basics;
 			</div>
 		</div>
 	</div>
-	<Preview title="test" author="ef" emoji="fe" votes="3"/>
-	<Preview title="test" author="ef" emoji="fe" votes="3"/>
-	<Preview title="test" author="ef" emoji="fe" votes="3"/>
 </section>
-
-<style>
-	.about__container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 5rem;
-		gap: 2rem;
-	}
-
-	.about__left-side {
-		flex-basis: 67%;
-	}
-
-	.about__right-side {
-	}
-
-	.about__title {
-		color: var(--text);
-		font-weight: bold;
-		margin-bottom: 1rem;
-		display: flex;
-		flex-direction: column;
-	}
-	.about__title--title {
-		font-size: 1.23rem;
-	}
-	.about__title--description {
-		font-size: 0.8rem;
-		opacity: 80%;
-		display: none;
-	}
-
-	.about__img {
-	}
-</style>

@@ -1,0 +1,17 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Preview from "../blog/Preview.astro";
+
+const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
+---
+
+<section>
+	<h2 class="font-bold">Top 3 Blogs</h2>
+	{
+		allBlog.map((post) => (
+			<Preview emoji="🔎" title={post.data.title} votes="3" />
+		))
+	}
+</section>
