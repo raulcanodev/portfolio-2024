@@ -22,11 +22,13 @@ const { title = "Raul Cano" } = Astro.props;
 		<slot />
 		<div class="cursor"></div>
 		<script>
-			const cursor = document.querySelector(".cursor");
-			document.addEventListener("mousemove", (e) => {
-				cursor.style.left = e.pageX + "px";
-				cursor.style.top = e.pageY + "px";
-			});
+			const cursor = document.querySelector(".cursor") as HTMLElement;
+			if (cursor) {
+				document.addEventListener("mousemove", (e) => {
+					cursor.style.left = e.pageX + "px";
+					cursor.style.top = e.pageY + "px";
+				});
+			}
 		</script>
 	</body>
 	<style is:global>
@@ -63,19 +65,22 @@ const { title = "Raul Cano" } = Astro.props;
 			margin: 0 auto;
 			max-height: 100%;
 			min-height: 100vh;
+			cursor: none;
 		}
 
 		@media (max-width: 768px) {
 			body,
 			figure {
-				padding: 0 2rem;
+				padding: 0;
 				max-width: 370px;
+				border: none;
 			}
 		}
 
 		a {
 			text-decoration: none;
 			color: var(--text);
+			cursor: none;
 		}
 		ul {
 			list-style: none;
@@ -110,7 +115,7 @@ const { title = "Raul Cano" } = Astro.props;
 
 		p {
 			color: var(--text);
-			font-size: 0.875rem;
+			font-size: 1rem;
 			line-height: 1.5;
 			margin: 0;
 			text-wrap: pretty;

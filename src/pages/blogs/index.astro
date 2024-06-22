@@ -1,14 +1,31 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Preview from "@/components/blog/Preview.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import Navbar from "@/components/Navbar.astro";
 
 const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
 ---
 
 <Layout title="Blogs - Raul Cano">
-	<h1>ded</h1>
-  {allBlog.map(post =>(
-    <p class="uppercase">{post.data.title}</p>
-  ))}
+	<Navbar />
+	<div class="container">
+		{
+			allBlog.map((post) => (
+				<Preview
+					emoji={post.data.emoji}
+					title={post.data.title}
+					slug={post.data.slug}
+					votes="3"
+				/>
+			))
+		}
+	</div>
 </Layout>
+
+<style>
+  .container{
+    margin-top: 5rem;
+  }
+</style>

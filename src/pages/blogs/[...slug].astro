@@ -1,0 +1,84 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@/components/Navbar.astro";
+import { getEntry } from "astro:content";
+// import {getCollection} from "astro:content";
+// import type {CollectionEntry} from "astro:content";
+
+// export async function getStaticPaths() {
+//   const allBlog: CollectionEntry<'blog'>[] = await getCollection('blog');
+
+//   return allBlog.map(entry=>({
+//     params: {
+//       slug: entry.slug
+//     },
+//     props: {entry}
+//   }))
+// }
+// const {entry} = Astro.props;
+const { slug } = Astro.params;
+console.log(slug);
+
+if (!slug) {
+	throw new Error("No slug provided");
+}
+
+const entry = await getEntry("blog", slug);
+
+if (entry === undefined) {
+	return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
+---
+
+<Layout title="Blog">
+	<Navbar />
+
+	<article class="max-w-3xl mx-auto md:px-0">
+		<h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
+
+		{
+			entry.data.date && (
+				<p class="text-gray-500 text-sm mb-4">
+					{new Date(entry.data.date).toLocaleDateString()}
+				</p>
+			)
+		}
+
+		{
+			entry.data.image && (
+				<img
+					src={`/images/${entry.data.image}`}
+					alt="Article Image"
+					class="w-full h-auto rounded-lg my-6"
+				/>
+			)
+		}
+
+		<div class="prose max-w-full">
+			<Content />
+		</div>
+	</article>
+</Layout>
+
+<style is:global>
+	p {
+		margin: 20px 0;
+	}
+
+  h1{
+    margin-top: 5rem;
+  }
+
+	h2 {
+		margin: 1rem 0;
+		font-size: 1.8rem;
+	}
+
+  @media(max-width: 768px){
+    h1{
+      margin-top: 2rem;
+    }
+  }
+</style>

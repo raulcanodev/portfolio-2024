@@ -1,6 +1,7 @@
 ---
 title: "Capturing Life's Moments with Canon Excellence"
 pubDate: 2024-01-15
+emoji: '📸'
 author: 'David Mitchell'
 image: 'image6.png'
 tags: ['photography', 'canon', 'tech']
@@ -16,6 +17,7 @@ Canon is renowned for its cutting-edge camera technology. From DSLRs to mirrorle
 ## **2. Diverse Lens Ecosystem**
 
 Canon boasts a diverse and extensive lens ecosystem that caters to photographers of all levels. Whether you're into portrait photography, wildlife, or landscape, Canon offers a lens for every occasion. The L-series lenses are a testament to Canon's commitment to optical excellence.
+![Texto alternativo de la imagen](/public/images/image4.png)
 
 ## **3. Innovative Imaging Solutions**
 

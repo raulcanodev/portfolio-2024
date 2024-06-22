@@ -11,7 +11,12 @@ const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
 	<h2 class="font-bold">Top 3 Blogs</h2>
 	{
 		allBlog.map((post) => (
-			<Preview emoji="🔎" title={post.data.title} votes="3" />
+			<Preview
+				emoji={post.data.emoji}
+				title={post.data.title}
+				slug={post.data.slug}
+				votes="3"
+			/>
 		))
 	}
 </section>

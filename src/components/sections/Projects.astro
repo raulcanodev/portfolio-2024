@@ -9,10 +9,9 @@ const projects = content.projects;
 	<h2 class="text-xl font-bold mb-4">Projects</h2>
 	<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 		{
-			projects.map(
-				({ url, description, highlights, name, isActive, github }) => {
+			projects.map(({ url, description, highlights, name, isActive, github }) => {
 					return (
-						<li class="project-item" key={name}>
+						<li class="project-item">
 							<article class="project-article">
 								<header class="flex items-center justify-between mb-4">
 									<h3>
@@ -36,9 +35,9 @@ const projects = content.projects;
 								</header>
 								<p class="text-sm mb-4">{description}</p>
 								<footer class="flex flex-wrap gap-2">
-									{highlights.map((highlight, index) => {
+									{highlights.map((highlight) => {
 										return (
-											<span class="highlight" key={index}>
+											<span class="highlight">
 												{highlight}
 											</span>
 										);
