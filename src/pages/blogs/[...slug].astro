@@ -2,20 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import Navbar from "@/components/Navbar.astro";
 import { getEntry } from "astro:content";
-// import {getCollection} from "astro:content";
-// import type {CollectionEntry} from "astro:content";
+import { formatDate } from "@/utils";
 
-// export async function getStaticPaths() {
-//   const allBlog: CollectionEntry<'blog'>[] = await getCollection('blog');
-
-//   return allBlog.map(entry=>({
-//     params: {
-//       slug: entry.slug
-//     },
-//     props: {entry}
-//   }))
-// }
-// const {entry} = Astro.props;
 const { slug } = Astro.params;
 console.log(slug);
 
@@ -32,19 +20,14 @@ if (entry === undefined) {
 const { Content } = await entry.render();
 ---
 
-<Layout title="Blog">
+<Layout title={entry.data.title}>
 	<Navbar />
 
 	<article class="blog max-w-3xl mx-auto md:px-0">
 		<h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
 
-		{
-			entry.data.date && (
-				<p class=" text-gray-500 text-sm mb-4">
-					{new Date(entry.data.date).toLocaleDateString()}
-				</p>
-			)
-		}
+		<p class="text-white text-sm mb-4">
+			By {entry.data.author} on {formatDate(entry.data.pubDate)}</p>
 
 		{
 			entry.data.image && (

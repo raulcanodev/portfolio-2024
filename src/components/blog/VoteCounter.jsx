@@ -1,5 +1,5 @@
 // src/components/VoteCounter.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 // import Arrow from "@/icons/arrow.astro"; 
 
 function VoteCounter({ initialVotes }) {

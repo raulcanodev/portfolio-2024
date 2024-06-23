@@ -6,6 +6,7 @@ author: 'Jane Smith'
 image: 'image4.png'
 tags: ['samsung', 'smartphones', 'gadgets']
 slug: elevate-your-mobile-experience-with-samsung
+category: 'WordPress'
 ---
 
 In the ever-evolving world of mobile technology, Samsung has consistently delivered cutting-edge devices that redefine the way we experience the digital world. If you're looking to elevate your mobile experience in 2024, here's why Samsung should be at the top of your list.

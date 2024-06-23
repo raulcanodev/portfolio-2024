@@ -2,17 +2,49 @@
 import Layout from "@/layouts/Layout.astro";
 import Preview from "@/components/blog/Preview.astro";
 import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 import Navbar from "@/components/Navbar.astro";
 
-const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
+const allBlog = await getCollection("blog");
+
+const allCategories = Array.from(
+	new Set(allBlog.map((post) => post.data.category))
+);
+
+let filteredBlogs = allBlog; // Inicialmente muestra todos los blogs
+
+const selectedCategory = Astro.url.searchParams.get("category");
+
+if (selectedCategory && selectedCategory !== "all") {
+	filteredBlogs = allBlog.filter(
+		(post) => post.data.category === selectedCategory
+	);
+}
 ---
 
 <Layout title="Blogs - Raul Cano">
 	<Navbar />
+
 	<div class="container">
+		<form id="category-form">
+			<select
+				id="category-select"
+				name="category"
+				onchange="document.getElementById('category-form').submit()">
+				<option value="all">All</option>
+				{
+					allCategories.map((category) => (
+						<option
+							value={category}
+							selected={category === selectedCategory}>
+							{category}
+						</option>
+					))
+				}
+			</select>
+		</form>
+
 		{
-			allBlog.map((post) => (
+			filteredBlogs.map((post) => (
 				<Preview
 					emoji={post.data.emoji}
 					title={post.data.title}
@@ -25,7 +57,7 @@ const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
 </Layout>
 
 <style>
-  .container{
-    margin-top: 5rem;
-  }
+	.container {
+		margin-top: 5rem;
+	}
 </style>
