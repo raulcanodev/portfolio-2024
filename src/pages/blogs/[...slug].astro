@@ -35,12 +35,12 @@ const { Content } = await entry.render();
 <Layout title="Blog">
 	<Navbar />
 
-	<article class="max-w-3xl mx-auto md:px-0">
+	<article class="blog max-w-3xl mx-auto md:px-0">
 		<h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
 
 		{
 			entry.data.date && (
-				<p class="text-gray-500 text-sm mb-4">
+				<p class=" text-gray-500 text-sm mb-4">
 					{new Date(entry.data.date).toLocaleDateString()}
 				</p>
 			)
@@ -63,22 +63,33 @@ const { Content } = await entry.render();
 </Layout>
 
 <style is:global>
-	p {
+	.blog p {
 		margin: 20px 0;
 	}
 
-  h1{
-    margin-top: 5rem;
-  }
+	.blog h1 {
+		margin-top: 5rem;
+	}
 
-	h2 {
+	.blog h2 {
 		margin: 1rem 0;
 		font-size: 1.8rem;
 	}
+	.blog ul {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.8;
+		padding: 1rem;
+		border: 1px solid var(--white);
+	}
 
-  @media(max-width: 768px){
-    h1{
-      margin-top: 2rem;
-    }
-  }
+	.blog li:hover a {
+		color: var(--contrast);
+	}
+
+	@media (max-width: 768px) {
+		.blog h1 {
+			margin-top: 2rem;
+		}
+	}
 </style>

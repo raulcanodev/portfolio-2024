@@ -8,11 +8,32 @@ tags: ['tech', 'hardware']
 slug: the-best-laptops-for-developers-in-2024
 ---
 
+## Índice
+
+- [Introducción](#introducción)
+- [MacBook Pro (M2X Chip)](#1-macbook-pro-m2x-chip)
+- [Dell XPS 17](#2-dell-xps-17)
+- [Lenovo ThinkPad X1 Carbon](#3-lenovo-thinkpad-x1-carbon)
+- [Razer Blade 15](#4-razer-blade-15)
+- [System76 Oryx Pro](#5-system76-oryx-pro)
+- [ASUS ROG Zephyrus G14](#6-asus-rog-zephyrus-g14)
+- [HP Spectre x360](#7-hp-spectre-x360)
+- [Conclusión](#conclusión)
+
+## Introducción
+
 In the ever-evolving landscape of technology, developers require laptops that can keep up with their demands for coding, debugging, and testing. As we step into 2024, the search for the perfect laptop for developers continues. Let's explore some of the top contenders for the title of "Best Laptops for Developers" this year.
 
 ## 1. MacBook Pro (M2X Chip)
 
 Apple has consistently delivered high-performance laptops for developers, and the MacBook Pro with the M2X chip is no exception. With its blazing-fast processor, ample RAM, and stunning Retina display, it's a dream machine for coding. The improved battery life ensures you can code for hours without interruption. Plus, macOS offers a Unix-based environment, perfect for software development.
+
+```javascript
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet('World'));
+```
 
 ## 2. Dell XPS 17
 
