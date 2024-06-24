@@ -1,8 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Preview from "@/components/blog/Preview.astro";
-import { getCollection } from "astro:content";
 import Navbar from "@/components/Navbar.astro";
+import { getCollection } from "astro:content";
 
 const allBlog = await getCollection("blog");
 
@@ -10,7 +10,7 @@ const allCategories = Array.from(
 	new Set(allBlog.map((post) => post.data.category))
 );
 
-let filteredBlogs = allBlog; // Inicialmente muestra todos los blogs
+let filteredBlogs = allBlog;
 
 const selectedCategory = Astro.url.searchParams.get("category");
 
@@ -21,9 +21,8 @@ if (selectedCategory && selectedCategory !== "all") {
 }
 ---
 
-<Layout title="Blogs - Raul Cano">
+<Layout title="Blogs">
 	<Navbar />
-
 	<div class="container">
 		<form id="category-form">
 			<select
@@ -42,7 +41,6 @@ if (selectedCategory && selectedCategory !== "all") {
 				}
 			</select>
 		</form>
-
 		{
 			filteredBlogs.map((post) => (
 				<Preview
