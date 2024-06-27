@@ -17,6 +17,7 @@
     "@fontsource-variable/league-gothic": "^5.0.20",
     "@fontsource/lekton": "^5.0.14",
     "@fontsource/twinkle-star": "^5.0.20",
+    "@philnash/astro-pagination": "^0.4.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.10.3",

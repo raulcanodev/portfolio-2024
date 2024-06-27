@@ -27,7 +27,8 @@ const { Content } = await entry.render();
 		<h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
 
 		<p class="text-white text-sm mb-4">
-			By {entry.data.author} on {formatDate(entry.data.pubDate)}</p>
+			By {entry.data.author} on {formatDate(entry.data.pubDate)}
+		</p>
 
 		{
 			entry.data.image && (

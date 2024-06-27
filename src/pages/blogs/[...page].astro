@@ -1,4 +1,8 @@
 ---
+import Pagination from "@philnash/astro-pagination";
+
+// https://philna.sh/blog/2023/07/13/easy-and-accessible-pagination-links-for-your-astro-collections/
+// https://www.youtube.com/watch?v=j_kWnI8rdLA
 import Layout from "@/layouts/Layout.astro";
 import Preview from "@/components/blog/Preview.astro";
 import Navbar from "@/components/Navbar.astro";
@@ -19,6 +23,10 @@ if (selectedCategory && selectedCategory !== "all") {
 		(post) => post.data.category === selectedCategory
 	);
 }
+
+// export async function getStaticPaths({ paginate }: any) {}
+const { page } = Astro.props;
+console.log(page);
 ---
 
 <Layout title="Blogs">
@@ -52,6 +60,7 @@ if (selectedCategory && selectedCategory !== "all") {
 			))
 		}
 	</div>
+	<!-- <Pagination page={page} urlPattern="/blog/page/{}" /> -->
 </Layout>
 
 <style>
