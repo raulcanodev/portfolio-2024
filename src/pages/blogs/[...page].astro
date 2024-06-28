@@ -3,10 +3,14 @@ import Pagination from "@philnash/astro-pagination";
 
 // https://philna.sh/blog/2023/07/13/easy-and-accessible-pagination-links-for-your-astro-collections/
 // https://www.youtube.com/watch?v=j_kWnI8rdLA
+
+// TODO:  No filtra
 import Layout from "@/layouts/Layout.astro";
 import Preview from "@/components/blog/Preview.astro";
 import Navbar from "@/components/Navbar.astro";
 import { getCollection } from "astro:content";
+
+export const prerender = true;
 
 const allBlog = await getCollection("blog");
 
@@ -24,14 +28,17 @@ if (selectedCategory && selectedCategory !== "all") {
 	);
 }
 
-// export async function getStaticPaths({ paginate }: any) {}
+export async function getStaticPaths({ paginate }: any) {
+	const allBlog = await getCollection("blog");
+	let filteredBlogs = allBlog;
+	return paginate(filteredBlogs, { pageSize: 2 });
+}
 const { page } = Astro.props;
-console.log(page);
 ---
 
 <Layout title="Blogs">
 	<Navbar />
-	<div class="container">
+	<div class="blogs-container">
 		<form id="category-form">
 			<select
 				id="category-select"
@@ -50,7 +57,7 @@ console.log(page);
 			</select>
 		</form>
 		{
-			filteredBlogs.map((post) => (
+			page.data.map((post: any) => (
 				<Preview
 					emoji={post.data.emoji}
 					title={post.data.title}
@@ -60,11 +67,11 @@ console.log(page);
 			))
 		}
 	</div>
-	<!-- <Pagination page={page} urlPattern="/blog/page/{}" /> -->
+	<Pagination page={page} urlPattern="/blogs/{}" />
 </Layout>
 
 <style>
-	.container {
+	.blogs-container {
 		margin-top: 5rem;
 	}
 </style>

@@ -6,6 +6,8 @@ import Preview from "@/components/blog/Preview.astro";
 import Navbar from "@/components/Navbar.astro";
 import { getCollection } from "astro:content";
 
+export const prerender = true;
+
 const allBlog = await getCollection("blog");
 
 const allCategories = Array.from(
@@ -36,6 +38,15 @@ console.log(page);
 				name="category"
 				onchange="document.getElementById('category-form').submit()">
 				<option value="all">All</option>
+				{
+					allCategories.map((category) => (
+						<option
+							value={category}
+							selected={category === selectedCategory}>
+							{category}
+						</option>
+					))
+				}
 			</select>
 		</form>
 		{
