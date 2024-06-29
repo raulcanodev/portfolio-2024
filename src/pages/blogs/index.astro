@@ -1,0 +1,93 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Preview from "@/components/blog/Preview.astro";
+import Navbar from "@/components/Navbar.astro";
+import { getCollection } from "astro:content";
+import Pagination from "@/components/blog/Pagination.astro";
+import { POSTS_PER_PAGE } from "@/constants";
+
+// Get the current parameters from the URL
+const currentPage: number | null = +Astro.url.searchParams.get("page")! || 1;
+const selectedCategory = Astro.url.searchParams.get("category") || "all";
+
+// Get all the blog posts
+const allBlog = await getCollection("blog");
+
+// Get all the unique categories
+const allCategories = Array.from(
+	new Set(allBlog.map((post) => post.data.category))
+);
+
+let filteredBlogs = allBlog;
+
+
+if (selectedCategory && selectedCategory !== "all") {
+	filteredBlogs = allBlog.filter(
+		(post) => post.data.category === selectedCategory
+	);
+}
+
+// Divide the posts into pages based on the number of posts per page
+const totalPages: number = Math.ceil(filteredBlogs.length / POSTS_PER_PAGE);
+
+if (currentPage > totalPages) {
+	return Astro.redirect(`/blogs?page=1&category=${selectedCategory}`);
+}
+
+// Get the posts for the current page
+const blogsForPage = filteredBlogs.slice(
+	(currentPage - 1) * POSTS_PER_PAGE,
+	currentPage * POSTS_PER_PAGE
+);
+
+---
+
+<Layout title="Blogs">
+	<Navbar />
+	<div class="blogs-container">
+		<form id="category-form" method="get" action="/blogs">
+			<input type="hidden" name="page" value={currentPage} />
+			<select
+				id="category-select"
+				name="category"
+				onchange="document.getElementById('category-form').submit()">
+				<option value="all">All</option>
+				{
+					allCategories.map((category) => (
+						<option
+							value={category}
+							selected={category === selectedCategory}>
+							{category}
+						</option>
+					))
+				}
+			</select>
+		</form>
+		{
+			blogsForPage.map((post: any) => (
+				<Preview
+					emoji={post.data.emoji}
+					title={post.data.title}
+					slug={post.data.slug}
+					votes="3"
+				/>
+			))
+		}
+	</div>
+	<Pagination
+		currentCategory={selectedCategory}
+		currentPage={currentPage > totalPages ? 1 : currentPage}
+		totalPages={totalPages}
+		disableNext={currentPage === totalPages}
+		disablePrevious={currentPage === 1}
+	/>
+</Layout>
+
+<style >
+	.blogs-container {
+		margin-top: 5rem;
+	}
+	select, select option{
+		text-transform: capitalize;
+	}
+</style>
