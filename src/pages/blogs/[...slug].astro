@@ -5,7 +5,6 @@ import { getEntry } from "astro:content";
 import { formatDate } from "@/utils";
 
 const { slug } = Astro.params;
-console.log(slug);
 
 if (!slug) {
 	throw new Error("No slug provided");

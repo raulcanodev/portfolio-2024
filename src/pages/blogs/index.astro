@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Preview from "@/components/blog/Preview.astro";
+import PreviewImagen from "@/components/blog/PreviewImagen.astro";
 import Navbar from "@/components/Navbar.astro";
 import { getCollection } from "astro:content";
 import Pagination from "@/components/blog/Pagination.astro";
@@ -18,8 +18,8 @@ const allCategories = Array.from(
 	new Set(allBlog.map((post) => post.data.category))
 );
 
+// Filter the posts based on the selected category
 let filteredBlogs = allBlog;
-
 
 if (selectedCategory && selectedCategory !== "all") {
 	filteredBlogs = allBlog.filter(
@@ -30,6 +30,7 @@ if (selectedCategory && selectedCategory !== "all") {
 // Divide the posts into pages based on the number of posts per page
 const totalPages: number = Math.ceil(filteredBlogs.length / POSTS_PER_PAGE);
 
+// Redirect if the actual page is greater than the total pages
 if (currentPage > totalPages) {
 	return Astro.redirect(`/blogs?page=1&category=${selectedCategory}`);
 }
@@ -65,12 +66,11 @@ const blogsForPage = filteredBlogs.slice(
 		</form>
 		{
 			blogsForPage.map((post: any) => (
-				<Preview
-					emoji={post.data.emoji}
+				<PreviewImagen
+					image={post.data.image}
+					category={post.data.category}
 					title={post.data.title}
-					slug={post.data.slug}
-					votes="3"
-				/>
+					slug={post.data.slug}/>
 			))
 		}
 	</div>
