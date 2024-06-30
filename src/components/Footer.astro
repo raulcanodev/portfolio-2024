@@ -1,9 +1,13 @@
 ---
 import { content } from "@content_en";
-import { Image } from "astro:assets";
+import GitHub from "@/icons/GitHub.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+
 import Preview from "@/components/blog/Preview.astro";
 
 const { name, domain, x, github, linkedin } = content.basics;
+
+const actualYear = new Date().getFullYear();
 ---
 
 <footer class="mt-[4rem]">
@@ -24,42 +28,42 @@ const { name, domain, x, github, linkedin } = content.basics;
 						href={github}
 						target="_blank"
 						class="hover:underline me-4 md:me-6 hover:text-green-500"
-						>Github</a
-					>
-				</li>
-				<li>
-					<a
-						href={linkedin}
-						target="_blank"
-						class="hover:underline hover:text-green-500 me-4 md:me-6"
-						>Linkedin</a
-					>
-				</li>
-				<li>
-					<a
-						href={x}
-						target="_blank"
-						class="hover:underline me-4 md:me-6 hover:text-green-500"
-						>X</a
-					>
-				</li>
+						><GitHub />
+					</a>
+					<li>
+						<a
+							href={linkedin}
+							target="_blank"
+							class="hover:underline hover:text-green-500 me-4 md:me-6"
+							>LinkedIn</a
+						>
+					</li>
+					<li>
+						<a
+							href={x}
+							target="_blank"
+							class="hover:underline me-4 md:me-6 hover:text-green-500"
+							>X</a
+						>
+					</li>
 
-				<!-- <li>
+					<!-- <li>
 					<a href="#" class="hover:underline hover:text-green-500"
 						>Contact</a
 					>
 				</li> -->
+				</li>
 			</ul>
+			<hr
+				class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+			/>
+			<span
+				class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+				>© {actualYear}
+				<a href={linkedin} class="hover:underline hover:text-green-500"
+					>{name}</a
+				>. All Rights Reserved.</span
+			>
 		</div>
-		<hr
-			class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
-		/>
-		<span
-			class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
-			>© 2023 <a
-				href={linkedin}
-				class="hover:underline hover:text-green-500">{name}</a
-			>. All Rights Reserved.</span
-		>
 	</div>
 </footer>

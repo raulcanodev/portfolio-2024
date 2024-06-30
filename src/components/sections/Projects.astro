@@ -6,10 +6,11 @@ const projects = content.projects;
 ---
 
 <section class="projects-section">
-	<h2 class="text-xl font-bold mb-4">Projects</h2>
+	<h2 class="text-3xl font-bold mb-4">Projects</h2>
 	<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 		{
-			projects.map(({ url, description, highlights, name, isActive, github }) => {
+			projects.map(
+				({ url, description, highlights, name, isActive, github }) => {
 					return (
 						<li class="project-item">
 							<article class="project-article">
