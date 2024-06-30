@@ -6,7 +6,7 @@ import Preview from "@/components/blog/Preview.astro";
 const { name } = content.basics;
 ---
 
-<section class="mt-28 mb-28">
+<!-- <section class="mt-28 mb-28">
 	<div class="flex flex-col md:flex-row gap-5 md:gap-0">
 		<div class="order-2 md:order-1 flex flex-col">
 			<div class="font-bold">
@@ -30,6 +30,37 @@ const { name } = content.basics;
 					alt="A bird."
 					width="200"
 					height="260"
+					style={{
+						maskImage: "linear-gradient(black 70%, transparent)",
+					}}
+				/>
+			</div>
+		</div>
+	</div>
+</section> -->
+<section class="mt-28 mb-28">
+	<div class="flex flex-col md:flex-col gap-5 md:gap-0">
+		<div class="order-2 md:order-2 flex flex-col">
+			<div class="font-bold">
+				<h1 class="text-3xl">{name}</h1>
+			</div>
+			<div class="mt-4">
+				<p class="text-base leading-relaxed">
+					Junior full stack developer specialized in web development,
+					I'm 27 years old and I live in Lisbon. My mother says that I
+					developed this love for programming because when I was a
+					child, I always played with Legos, and this is like digital
+					Legos for adults, maybe she's right.
+				</p>
+			</div>
+		</div>
+		<div class="order-1 md:order-1 flex justify-center items-center">
+			<div class="w-52 h-52 relative">
+				<img
+					class="w-full h-full object-cover"
+					src="/raul.png"
+					alt="A bird."
+
 					style={{
 						maskImage: "linear-gradient(black 70%, transparent)",
 					}}

@@ -13,7 +13,7 @@ const { name, domain, x, github, linkedin } = content.basics;
 				href="/"
 				class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
 				<span
-					class="self-center text-2xl hover:text-green-500 font-semibold whitespace-nowrap dark:text-white"
+					class="self-center text-2xl hover:text-green-500 hover:underline font-semibold whitespace-nowrap dark:text-white"
 					>{domain}</span
 				>
 			</a>
@@ -29,14 +29,6 @@ const { name, domain, x, github, linkedin } = content.basics;
 				</li>
 				<li>
 					<a
-						href={x}
-						target="_blank"
-						class="hover:underline me-4 md:me-6 hover:text-green-500"
-						>X</a
-					>
-				</li>
-				<li>
-					<a
 						href={linkedin}
 						target="_blank"
 						class="hover:underline hover:text-green-500 me-4 md:me-6"
@@ -44,10 +36,19 @@ const { name, domain, x, github, linkedin } = content.basics;
 					>
 				</li>
 				<li>
+					<a
+						href={x}
+						target="_blank"
+						class="hover:underline me-4 md:me-6 hover:text-green-500"
+						>X</a
+					>
+				</li>
+
+				<!-- <li>
 					<a href="#" class="hover:underline hover:text-green-500"
 						>Contact</a
 					>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<hr
@@ -55,8 +56,9 @@ const { name, domain, x, github, linkedin } = content.basics;
 		/>
 		<span
 			class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
-			>© 2023 <a href="https://flowbite.com/" class="hover:underline"
-				>{name}</a
+			>© 2023 <a
+				href={linkedin}
+				class="hover:underline hover:text-green-500">{name}</a
 			>. All Rights Reserved.</span
 		>
 	</div>

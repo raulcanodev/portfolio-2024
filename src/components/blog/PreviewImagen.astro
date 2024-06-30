@@ -73,10 +73,15 @@ const formattedDate = formatDate(date);
 		<p class="text-gray-300">
 			{previewText}
 		</p>
-		<div class="mt-4 text-gray-500">
+		<div class="mt-4 text-gray-500 flex justify-between">
 			<span class="font-semibold text-gray-300 text-sm"
-				>By <a href={linkAuthor} target="_blank" class="hover:underline">{author}</a></span
+				>By <a
+					href={linkAuthor || "#"}
+					target="_blank"
+					class="hover:underline">{author}</a
+				></span
 			>
+			<span class="read-more hidden text-sm">&#9679;</span>
 		</div>
 	</div>
 </div>
@@ -90,5 +95,10 @@ const formattedDate = formatDate(date);
 	}
 	div:hover img {
 		transform: scale(1.05);
+	}
+
+	div:hover .read-more {
+		color: var(--contrast);
+		display: block;
 	}
 </style>
