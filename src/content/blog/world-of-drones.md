@@ -3,6 +3,7 @@ title: 'Soaring to New Heights: The World of Drones'
 pubDate: 2024-01-16
 emoji: '🚁'
 author: 'Sarah Davis'
+linkAuthor: 'https://x.com/raulcanodev'
 image: 'image5.png'
 tags: ['drones', 'tech', 'gadgets']
 slug: soaring-to-new-heights-the-world-of-drones

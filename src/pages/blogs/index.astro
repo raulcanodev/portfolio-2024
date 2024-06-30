@@ -40,13 +40,12 @@ const blogsForPage = filteredBlogs.slice(
 	(currentPage - 1) * POSTS_PER_PAGE,
 	currentPage * POSTS_PER_PAGE
 );
-
 ---
 
 <Layout title="Blogs">
 	<Navbar />
 	<div class="blogs-container">
-		<form id="category-form" method="get" action="/blogs">
+		<form class="mb-3" id="category-form" method="get" action="/blogs">
 			<input type="hidden" name="page" value={currentPage} />
 			<select
 				id="category-select"
@@ -70,7 +69,11 @@ const blogsForPage = filteredBlogs.slice(
 					image={post.data.image}
 					category={post.data.category}
 					title={post.data.title}
-					slug={post.data.slug}/>
+					pubDate={post.data.pubDate}
+					slug={post.data.slug}
+					author={post.data.author}
+					linkAuthor={post.data.linkAuthor}
+				/>
 			))
 		}
 	</div>
@@ -83,11 +86,12 @@ const blogsForPage = filteredBlogs.slice(
 	/>
 </Layout>
 
-<style >
+<style>
 	.blogs-container {
 		margin-top: 5rem;
 	}
-	select, select option{
+	select,
+	select option {
 		text-transform: capitalize;
 	}
 </style>

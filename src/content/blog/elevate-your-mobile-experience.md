@@ -3,6 +3,7 @@ title: 'Elevate Your Mobile Experience with Samsung'
 pubDate: 2024-01-17
 emoji: '📱'
 author: 'Jane Smith'
+linkAuthor: 'https://x.com/raulcanodev'
 image: 'image4.png'
 tags: ['samsung', 'smartphones', 'gadgets']
 slug: elevate-your-mobile-experience-with-samsung

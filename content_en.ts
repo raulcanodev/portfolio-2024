@@ -6,6 +6,11 @@ interface Basics {
 	picture: string;
 	email: string;
 	url: string;
+	domain: string;
+	phone: string;
+	x: string;
+	linkedin: string;
+	github: string;
 }
 
 interface WorkExperience {
@@ -73,6 +78,11 @@ export const content: Content = {
 		picture: "https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg",
 		email: "rawraul@outlook.com",
 		url: "https://raulcano.dev",
+		domain: "raulcano.dev",
+		phone: "+34 666 666 666",
+		x: "https://x.com/raulcanodev",
+		linkedin: "https://www.linkedin.com/in/raulcano-in/",
+		github: "https://github.com/raulcanodev",
 	},
 	work: [
 		{

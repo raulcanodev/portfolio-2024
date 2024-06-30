@@ -16,6 +16,9 @@ const allBlog: CollectionEntry<"blog">[] = await getCollection("blog");
 				category={post.data.category}
 				title={post.data.title}
 				slug={post.data.slug}
+				pubDate={post.data.pubDate}
+				author={post.data.author}
+				linkAuthor={post.data.linkAuthor}
 			/>
 		))
 	}

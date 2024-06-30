@@ -3,6 +3,7 @@ title: 'Immerse in the Virtual World: VR Development'
 pubDate: 2024-01-18
 emoji: '🕶️'
 author: 'Michael Johnson'
+linkAuthor: 'https://x.com/raulcanodev'
 image: 'image3.png'
 tags: ['vr', 'gadgets', 'tech']
 slug: immerse-in-the-virtual-world-vr-development

@@ -3,6 +3,7 @@ title: "Capturing Life's Moments with Canon Excellence"
 pubDate: 2024-01-15
 emoji: '📸'
 author: 'David Mitchell'
+linkAuthor: 'https://x.com/raulcanodev'
 image: 'image6.png'
 tags: ['photography', 'canon', 'tech']
 slug: capturing-lifes-moments-with-canon-excellence

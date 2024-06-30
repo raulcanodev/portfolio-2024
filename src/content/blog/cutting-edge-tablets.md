@@ -3,6 +3,7 @@ title: 'Unleash Creativity With These Cutting-Edge Tablets'
 pubDate: 2024-01-14
 emoji: '🎨'
 author: 'Ralph Johnson'
+linkAuthor: 'https://x.com/raulcanodev'
 image: 'image7.png'
 tags: ['tablets', 'gadgets']
 slug: unleash-creativity-with-these-cutting-edge-tablets

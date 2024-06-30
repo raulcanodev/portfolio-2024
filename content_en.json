@@ -6,7 +6,12 @@
     "summary2": "I am always learning new technologies and improving my current skills. This helps me adapt easily to different tech stacks and be a useful part of any team.",
 		"picture": "https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg",
 		"email": "rawraul@outlook.com",
-		"url": "https://raulcano.dev"
+		"url": "https://raulcano.dev",
+		"domain": "raulcano.dev",
+		"phone": "+34 666 666 666",
+		"x": "https://x.com/raulcanodev",
+		"linkedin": "https://www.linkedin.com/in/raulcano-in/",
+		"github": "https://github.com/raulcanodev"
 	},
 	"work": [
 		{
