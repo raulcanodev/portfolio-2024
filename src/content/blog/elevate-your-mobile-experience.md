@@ -1,6 +1,6 @@
 ---
 title: 'Elevate Your Mobile Experience with Samsung'
-pubDate: 2024-01-17
+pubDate: 2024-03-17
 emoji: '📱'
 author: 'Jane Smith'
 linkAuthor: 'https://x.com/raulcanodev'

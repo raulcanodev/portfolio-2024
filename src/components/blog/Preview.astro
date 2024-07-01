@@ -13,7 +13,7 @@ interface Props {
 const { emoji, title, votes, slug } = Astro.props;
 ---
 
-<div
+<article
 	class="border border-white px-4 py-1 mt-4 hover:border-green-500 hover:text-green-500 transition-all">
 	<div class="flex flex-row justify-between items-center gap-8">
 		<div class="flex flex-row items-center gap-4">
@@ -28,11 +28,10 @@ const { emoji, title, votes, slug } = Astro.props;
 		</div>
 		<div>
 			<div class="flex flex-row items-center gap-4">
-				<VoteCounter initialVotes={votes} client:load />
-			</div>
+
 		</div>
 	</div>
-</div>
+</article>
 
 <style>
 	div:hover a {
