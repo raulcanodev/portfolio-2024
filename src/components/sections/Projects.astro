@@ -5,134 +5,87 @@ import { content } from "@content_en";
 const projects = content.projects;
 ---
 
+<script>
+	const accordionHeaders = document.querySelectorAll("#accordion-flush-heading")
+	
+	
+	accordionHeaders.forEach((accordion) => {
+		const icon = accordion.querySelector('[data-accordion-icon]');
+
+		accordion.addEventListener("click", () => {
+			accordion.nextElementSibling.classList.toggle("hidden");
+			icon.classList.toggle("rotate-180");
+			
+
+		});	
+	});
+
+</script>
+
+
 <section class="projects-section">
 	<h2 class="font-bold text-3xl uppercase mb-5">Projects</h2>
-	<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-		{
-			projects.map(
-				({ url, description, highlights, name, isActive, github }) => {
-					return (
-						<li class="project-item">
-							<article class="project-article">
-								<header class="flex items-center justify-between mb-4">
-									<h3>
-										<a
-											href={url}
-											target="_blank"
-											title={`Ver el proyecto ${name}`}>
-											{name}
-										</a>
-										{isActive && <span>•</span>}
-									</h3>
-									{github && (
-										<a
-											class="github-code-link"
-											href={github}
-											target="_blank"
-											title={`Ver código fuente del proyecto ${name}`}>
-											<GitHub />
-										</a>
-									)}
-								</header>
-								<p class="text-sm mb-4">{description}</p>
-								<footer class="flex flex-wrap gap-2">
-									{highlights.map((highlight) => {
-										return (
-											<span class="highlight">
-												{highlight}
-											</span>
-										);
-									})}
-								</footer>
-							</article>
-						</li>
-					);
-				}
-			)
-		}
-	</ul>
 
+	{
+		projects.map(
+			({ url, description, highlights, name, isActive, github }) => {
+				return (
+					<>
+						<div
+							id="accordion-flush"
+							data-accordion="collapse"
+							data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+							data-inactive-classes="text-gray-500 dark:text-gray-400">
+							<h2 id="accordion-flush-heading">
+								<button
+									type="button"
+									class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-200 border-b border-gray-200 dark:border-gray-700 dark:text-gray-100 gap-3"
+									data-accordion-target="#accordion-flush-body"
+									aria-expanded="true"
+									aria-controls="accordion-flush-body">
+									<span>{name}</span>
+
+									<span class="text-sm text-gray-400">{highlights.join(" | ")}</span>
+									
+									<svg
+										data-accordion-icon
+										class="w-3 h-3 rotate-180 shrink-0"
+										aria-hidden="true"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 10 6">
+										<path
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M9 5 5 1 1 5"
+										/>
+									</svg>
+								</button>
+							</h2>
+							<div id="accordion-flush-body" class="hidden" aria-labelledby="accordion-flush-heading">
+								<div class="py-5 border-b border-gray-200 dark:border-gray-700">
+									<p class="mb-2 text-gray-500 dark:text-gray-400">
+										{description}
+									</p>
+									<p class="text-gray-500 dark:text-gray-400">
+										Check out this guide to learn how to{" "}
+										<a
+											href="/docs/getting-started/introduction/"
+											class="text-blue-600 dark:text-blue-500 hover:underline">
+											get started
+										</a>{" "}
+										and start developing websites even
+										faster with components on top of
+										Tailwind CSS.
+									</p>
+								</div>
+							</div>
+						</div>
+					</>
+				);
+			}
+		)
+	}
 </section>
-
-
-
-<style>
-	section {
-		margin-top: 5rem;
-	}
-	.project-item {
-		border: 1px solid #f2f2f2;
-		padding: 16px;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-
-	.project-article {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-
-	.project-article header {
-		margin-bottom: 8px;
-	}
-
-	.project-article h3 {
-		font-size: 1rem;
-		display: flex;
-		align-items: center;
-		margin-bottom: 0;
-	}
-
-	.project-article h3 a {
-		color: white;
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
-
-	.project-article h3 a:hover {
-		color: rgb(0, 188, 47);
-	}
-
-	.project-article h3 span {
-		color: rgb(0, 188, 47);
-		margin-left: 5px;
-	}
-
-	.project-article p {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
-		margin-bottom: 8px;
-	}
-
-	.project-article footer {
-		font-size: 0.75rem;
-	}
-
-	.highlight {
-		background-color: #eee;
-		/* border: 1px solid #ddd; */
-		color: #444;
-		font-weight: 500;
-		padding: 2px 8px;
-	}
-
-	.github-code-link {
-		margin-left: 5px;
-	}
-
-	/* Media query para ajustes en dispositivos móviles */
-	@media (max-width: 700px) {
-		.projects-section {
-			padding: 0;
-		}
-
-		.project-item {
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 16px;
-		}
-	}
-</style>
