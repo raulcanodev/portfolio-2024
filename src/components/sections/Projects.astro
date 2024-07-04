@@ -28,11 +28,13 @@ const projects = content.projects;
 				if(header !== accordionHeader){
 					header.classList.remove("active")
 					header.nextElementSibling.style.maxHeight = 0
+
+					// const otherIcon = header.querySelector('[data-accordion-icon]');
+					// if (otherIcon){
+					// 	otherIcon.classList.remove("rotate-180");
+					// }
 				}
 			})
-
-			
-
 		});	
 	});
 </script>
