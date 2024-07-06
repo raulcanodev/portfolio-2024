@@ -76,7 +76,7 @@ export const content: Content = {
 		summary:
 			"Junior Full Stack Developer at WidgiLabs, where I create WordPress plugins that empower clients to customize their websites directly through the CMS. My work involves developing features with PHP and React, and designing frontend previews with CSS, HTML, PHP, and JavaScript.",
 		summary2:
-			"I am always learning new technologies and improving my current skills. This helps me adapt easily to different tech stacks and be a useful part of any team.",
+			"My mother says that I developed this love for programming because when I was a child, I always played with Legos, and this is like digital Legos for adults, maybe she's right.",
 		picture: "https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg",
 		email: "rawraul@outlook.com",
 		url: "https://raulcano.dev",
