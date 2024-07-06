@@ -3,7 +3,6 @@ import { content } from "@content_en";
 import Copy from "@/icons/copy.astro";
 
 const { name, linkedin, github, email } = content.basics;
-
 ---
 
 <script>
@@ -13,46 +12,49 @@ const { name, linkedin, github, email } = content.basics;
 			mailElement.addEventListener("click", (e) => {
 				e.preventDefault();
 				const emailDisplay = document.getElementById("emailDisplay");
+				const email = emailDisplay?.textContent;
 				if (emailDisplay) {
-          emailDisplay.textContent = "I'm in your clipboard now!";
-          emailDisplay.style.color = "#48bb78";
+					emailDisplay.textContent = "I'm in your clipboard now!";
+					emailDisplay.style.color = "#21C55E";
 					setTimeout(() => {
-						emailDisplay.textContent = "rawraul@outlook.com";
-					}, 3000); // Change back to the original email after 2 seconds
+						emailDisplay.textContent = email || "";
+					}, 3000); // Change back to the original email after 3 seconds
 				}
-				navigator.clipboard.writeText("rawraul@outlook.com");
+				navigator.clipboard.writeText(email || "");
 			});
 		}
 	});
 </script>
-<section id="contact" class="mt-[5rem]">
+<section id="contact" class="">
 	<div>
-		<h2 class="text-3xl font-bold mb-4 uppercase">Find Raul on the internet</h2>
+		<h2 class="text-3xl font-bold mb-4 uppercase">
+			Find Raul on the internet
+		</h2>
 	</div>
 	<div class="w-full">
 		<!-- CONTACTS -->
-		<div class="flex justify-center align-center mt-[4rem]">
+		<div class="flex align-center mt-8">
 			<ul>
 				<li>
 					<p
-						class="flex items-center gap-2 hover:text-green-500 hover:underline copy cursor-none">
-						<span id="emailDisplay">rawraul@outlook.com</span>
+						class="flex items-center gap-2 hover:text-green-500 hover:underline copy cursor-pointer">
+						<span id="emailDisplay">{email}</span>
 						<a class="copy"><Copy /></a>
 					</p>
 				</li>
 				<li>
 					<a
 						class="hover:text-green-500 hover:underline"
-            target="_blank"
-						href="https://www.linkedin.com/in/raul-melo-1b1b1b1b1/">
+						target="_blank"
+						href={linkedin}>
 						LinkedIn &#8599;
 					</a>
 				</li>
 				<li>
 					<a
-          target="_blank"
+						target="_blank"
 						class="hover:text-green-500 hover:underline"
-						href="https://github.com/raulmelo">GitHub &#8599;</a
+						href={github}>GitHub &#8599;</a
 					>
 				</li>
 			</ul>
@@ -72,7 +74,7 @@ const { name, linkedin, github, email } = content.basics;
 		margin: 0 auto;
 		width: 600px;
 		height: 300px;
-		border-bottom: 1px solid #ffffff;
+		border-bottom: 1px solid var(--text);
 	}
 	.clear {
 		clear: both;
@@ -81,21 +83,21 @@ const { name, linkedin, github, email } = content.basics;
 		float: left;
 		width: 2px;
 		height: 100px;
-		background: #ffffff;
+		background: var(--text);
 		animation: left-wall 3s infinite;
 	}
 	.right_wall {
 		float: right;
 		width: 2px;
 		height: 100px;
-		background: #ffffff;
+		background: var(--text);
 		animation: right-wall 3s infinite;
 	}
 	.ball {
 		float: left;
 		width: 10px;
 		height: 10px;
-		background: #ffffff;
+		background: var(--text);
 		border-radius: 50%;
 		margin-top: 30px;
 		animation: bounce_ball 3s linear infinite;

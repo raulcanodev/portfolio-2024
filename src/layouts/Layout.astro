@@ -23,13 +23,21 @@ const { title = "Raul Cano" } = Astro.props;
 		<slot />
 		<div class="cursor"></div>
 		<script>
-			const cursor = document.querySelector(".cursor") as HTMLElement;
-			if (cursor) {
-				document.addEventListener("mousemove", (e) => {
-					cursor.style.left = e.pageX + "px";
-					cursor.style.top = e.pageY + "px";
-				});
-			}
+			// const cursor = document.querySelector(".cursor") as HTMLElement;
+			// const checkScreenSize = () => {
+			// 	if (window.innerWidth < 768) {
+			// 		cursor.style.display = "none";
+			// 	} else {
+			// 		cursor.style.display = "block";
+			// 	}
+			// };
+			// checkScreenSize();
+			// if (cursor) {
+			// 	document.addEventListener("mousemove", (e) => {
+			// 		cursor.style.left = e.pageX + "px";
+			// 		cursor.style.top = e.pageY + "px";
+			// 	});
+			// }
 		</script>
 	</body>
 	<Footer />
@@ -41,7 +49,8 @@ const { title = "Raul Cano" } = Astro.props;
 			--light-gray: #f5f5f5;
 			--contrast: #21c55e;
 			--background: var(--dark);
-			--text: var(--white);
+			--text: rgb(229 231 235); /* Tailwind - gray-200 */
+			--blog-content: #ccc;
 			--lines: rgba(255, 255, 255, 0.5);
 		}
 		html {
@@ -80,7 +89,7 @@ const { title = "Raul Cano" } = Astro.props;
 				20px 20px;
 			/* letter-spacing: -0.025rem; */
 			scroll-behavior: smooth;
-			cursor: none;
+			/* cursor: none !important; */
 		}
 		body,
 		figure {
@@ -95,7 +104,7 @@ const { title = "Raul Cano" } = Astro.props;
 			box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
 			-webkit-box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
 			-moz-box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
-			cursor: none;
+			/* cursor: none; */
 			z-index: 99;
 		}
 
@@ -111,7 +120,7 @@ const { title = "Raul Cano" } = Astro.props;
 		a {
 			text-decoration: none;
 			color: var(--text);
-			cursor: none;
+			/* cursor: none; */
 		}
 		ul {
 			list-style: none;
@@ -122,7 +131,7 @@ const { title = "Raul Cano" } = Astro.props;
 		*::before,
 		*::after {
 			box-sizing: border-box;
-			cursor: none;
+			/* cursor: none !important; */
 		}
 
 		h1,
@@ -147,20 +156,20 @@ const { title = "Raul Cano" } = Astro.props;
 
 		p {
 			color: var(--text);
-			font-size: 0,875rem;
+			font-size: 0, 875rem;
 			line-height: 1.5;
 			margin: 0;
 			text-wrap: pretty;
 		}
-		button{
-			cursor: none;
+		button {
+			/* cursor: none; */
 		}
 
-		section{
+		section {
 			margin: 3rem 0;
 		}
 		/* CURSOR STYLES */
-		.cursor {
+		/* .cursor {
 			position: absolute;
 			width: 20px;
 			background-color: white;
@@ -170,10 +179,10 @@ const { title = "Raul Cano" } = Astro.props;
 			transform: translate(-50%, -50%);
 			pointer-events: none;
 			mix-blend-mode: difference;
-		}
+		} */
 
 		/* CURSOR IF YOU AD AN EMOJI IN THE CURSOR DIV */
-		.cursor {
+		/* .cursor {
 			position: absolute;
 			width: 20px;
 			height: 20px;
@@ -186,10 +195,10 @@ const { title = "Raul Cano" } = Astro.props;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-		}
+		} */
 
-		p:hover ~ .cursor {
+		/* p:hover ~ .cursor {
 			transform: scale(2);
-		}
+		} */
 	</style>
 </html>

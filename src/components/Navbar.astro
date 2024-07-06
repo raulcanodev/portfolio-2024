@@ -44,21 +44,33 @@ console.log("slug", currentPath);
 				<li>
 					<a
 						href="/"
-						class={`${currentPath === "/" ? "md:dark:text-green-500 underline underline-offset-8 bg-green-500 " : "text-gray-700"} md:hidden capitalize md:uppercase md:bg-transparent block py-2 pr-4 pl-3 border-b border-gray-100 hover:underline underline-offset-8 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans font-bold md:text-xl `}>
+						class={`block py-2 pr-4 pl-3 border-b border-gray-100 md:border-0 md:p-0 font-sans font-bold md:text-xl 
+            ${currentPath === "/" ? "dark:text-gray-200 text-gray-200 md:underline underline-offset-8 bg-green-500" : "dark:text-white"} 
+            md:bg-transparent md:hover:underline underline-offset-8 md:hover:bg-transparent 
+            dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
+            md:dark:hover:text-green-500 uppercase md:hidden`}>
 						home
 					</a>
 				</li>
 				<li>
 					<a
-						href="/blogs"
-						class={`${currentPath === "/blogs" ? "md:dark:text-green-500 underline underline-offset-8 bg-green-500 " : "text-gray-700"} capitalize md:uppercase text-green-500 md:bg-transparent block py-2 pr-4 pl-3 border-b border-gray-100 hover:underline underline-offset-8 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans font-bold md:text-xl `}>
+						href="/blog"
+						class={`block py-2 pr-4 pl-3 border-b border-gray-100 md:border-0 md:p-0 font-sans font-bold md:text-xl 
+            ${currentPath === "/blog" ? "dark:text-gray-200 text-gray-200 md:underline underline-offset-8 bg-green-500" : "dark:text-white"} 
+            md:bg-transparent md:hover:underline underline-offset-8 md:hover:bg-transparent 
+            dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
+            md:dark:hover:text-green-500 uppercase`}>
 						blog
 					</a>
 				</li>
 				<li>
 					<a
 						href="/#contact"
-						class={`${currentPath === "/contact" ? "md:dark:text-green-500 underline underline-offset-8 bg-green-500" : "text-gray-700"} capitalize md:uppercase md:bg-transparent text-green-500 block py-2 pr-4 pl-3 border-b border-gray-100 hover:underline underline-offset-8 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans font-bold md:text-xl `}>
+						class={`block py-2 pr-4 pl-3 border-b border-gray-100 md:border-0 md:p-0 font-sans font-bold md:text-xl 
+            ${currentPath === "#contact" ? "dark:text-gray-200 text-gray-200 md:underline underline-offset-8 bg-green-500" : "dark:text-white"} 
+            md:bg-transparent md:hover:underline underline-offset-8 md:hover:bg-transparent 
+            dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
+            md:dark:hover:text-green-500 uppercase`}>
 						contact
 					</a>
 				</li>

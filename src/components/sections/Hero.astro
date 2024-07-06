@@ -6,32 +6,36 @@ import Preview from "@/components/blog/Preview.astro";
 const { name } = content.basics;
 ---
 
-<section class="mt-[9rem] mb-28">
-	<div class="flex flex-col justify-center items-center md:flex-row gap-5 md:gap-7">
+<section class="mb-28">
+	<div
+		class="flex flex-col justify-center items-center md:flex-row gap-5 md:gap-7">
 		<div class="order-2 md:order-1 flex justify-center items-center">
 			<div class="w-[8rem] h-[8rem] relative">
 				<img
-					class="w-full h-full object-cover"
+					class="w-full h-full object-cover rounded-full"
 					src="/round_profile.png"
 					alt="A bird."
-					style={{
-						maskImage: "linear-gradient(black 70%, transparent)",
-					}}
 				/>
 			</div>
 		</div>
 
 		<div class="order-1 md:order-2 flex flex-col">
 			<div class="font-bold">
-				<h1 class="text-5xl font-bold text-center md:text-left uppercase">{name}</h1>
+				<h1
+					class="text-5xl font-bold text-center md:text-left uppercase dark:text-white">
+					{name}
+				</h1>
 			</div>
 			<div class="mt-4">
-				<h2 class="text-2xl uppercase font-bold text-center md:text-left text-gray-300">Is a developer</h2>
+				<h2
+					class="text-2xl uppercase font-bold text-center md:text-left text-gray-700 dark:text-gray-300">
+					Is a developer
+				</h2>
 			</div>
 		</div>
 	</div>
 	<div class="mt-[5rem]">
-		<p class="text-lg leading-relaxed">
+		<p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
 			Junior full stack developer specialized in web development, I'm 27
 			years old and I live in Lisbon. My mother says that I developed this
 			love for programming because when I was a child, I always played
@@ -39,37 +43,4 @@ const { name } = content.basics;
 			right.
 		</p>
 	</div>
-	<hr class="mt-10 border-1 border-gray-400" />
 </section>
-
-<!-- <section class="mt-28 mb-28">
-	
-	<div class="flex flex-col md:flex-col gap-5 md:gap-0">
-		<div class="order-2 md:order-2 flex flex-col">
-			<div class="font-bold">
-				<h1 class="text-3xl">{name}</h1>
-			</div>
-			<div class="mt-4">
-				<p class="text-base leading-relaxed">
-					Junior full stack developer specialized in web development,
-					I'm 27 years old and I live in Lisbon. My mother says that I
-					developed this love for programming because when I was a
-					child, I always played with Legos, and this is like digital
-					Legos for adults, maybe she's right.
-				</p>
-			</div>
-		</div>
-		<div class="order-1 md:order-1 flex justify-center items-center">
-			<div class="w-52 h-52 relative">
-				<img
-					class="w-full h-full object-cover"
-					src="/raul.png"
-					alt="A bird."
-					style={{
-						maskImage: "linear-gradient(black 70%, transparent)",
-					}}
-				/>
-			</div>
-		</div>
-	</div>
-</section> -->

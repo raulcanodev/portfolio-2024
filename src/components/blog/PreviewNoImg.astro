@@ -31,7 +31,7 @@ const previewText =
 		? contentText.substring(0, descriptionLength) + "..."
 		: contentText;
 
-const linkPath = `/blogs/${slug}`;
+const linkPath = `/blog/${slug}`;
 const date = new Date(pubDate);
 
 // Create a function to format the date
@@ -56,7 +56,7 @@ const formattedDate = formatDate(date);
 			<time datetime="2024-06-28">{formattedDate}</time>
 		</div>
 		<h2 class="text-xl uppercase font-semibold mb-2">
-			<a href={`/blogs/${slug}`} class="hover:text-green-500">
+			<a href={`/blog/${slug}`} class="hover:text-green-500">
 				{title}
 			</a>
 		</h2>

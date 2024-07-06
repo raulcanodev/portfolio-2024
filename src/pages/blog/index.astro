@@ -32,7 +32,7 @@ const totalPages: number = Math.ceil(filteredBlogs.length / POSTS_PER_PAGE);
 
 // Redirect if the actual page is greater than the total pages
 if (currentPage > totalPages) {
-	return Astro.redirect(`/blogs?page=1&category=${selectedCategory}`);
+	return Astro.redirect(`/blog?page=1&category=${selectedCategory}`);
 }
 
 // Get the posts for the current page
@@ -45,7 +45,7 @@ const blogsForPage = filteredBlogs.slice(
 <Layout title="Blog | Raul Cano">
 	<Navbar />
 	<div class="blogs-container">
-		<form class="mb-3" id="category-form" method="get" action="/blogs">
+		<form class="mb-3" id="category-form" method="get" action="/blog">
 			<input type="hidden" name="page" value={currentPage} />
 			<select
 				id="category-select"
