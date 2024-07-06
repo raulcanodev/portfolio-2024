@@ -7,19 +7,19 @@ const { name, label, summary, summary2 } = content.basics;
 ---
 
 <script>
-	const label = document.querySelector("h2");
-	const labelContent = label?.textContent;
-
-	// effect keyboard type for labelcontent
-	var i = 0;
-	var txt = "IS A DEVELOPER"; /* The text */
-	var speed = 50; /* The speed/duration of the effect in milliseconds */
+	let i = 0;
+	const txt = "IS A DEVELOPER"; 
+	const speed = 60; // Speed of typing
 
 	function typeWriter() {
-		if (i < txt.length) {
-			document.getElementById("label").innerHTML += txt.charAt(i);
-			i++;
-			setTimeout(typeWriter, speed);
+		const labelElement = document.getElementById("label");
+		if (labelElement) {
+			// Check if the element exists
+			if (i < txt.length) {
+				labelElement.innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			}
 		}
 	}
 
