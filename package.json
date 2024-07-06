@@ -14,6 +14,7 @@
     "@astrojs/mdx": "^3.1.1",
     "@astrojs/react": "^3.6.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.7.2",
     "@fontsource-variable/league-gothic": "^5.0.20",
     "@fontsource/lekton": "^5.0.14",
     "@fontsource/twinkle-star": "^5.0.20",
