@@ -56,6 +56,8 @@ interface Project {
 	highlights: string[];
 	github?: string;
 	url?: string;
+	img?: string;
+	youtube?: string;
 }
 
 interface Content {
@@ -202,36 +204,35 @@ export const content: Content = {
 			isActive: false,
 			description:
 				"Forum based in Reddit. Users can create threads, comment, like, report threads, and much more.",
-			highlights: [
-				"React",
-				"Flask",
-				"SQLAlchemy",
-			],
+			highlights: ["React", "Flask", "SQLAlchemy"],
+			img: "/images/projects/forogeeks.png",
 			github: "https://github.com/4GeeksAcademy/forogeeks",
-			url: "https://github.com/4GeeksAcademy/forogeeks",
+			youtube: "https://www.youtube.com/watch?v=WEHCkBbcg8o&t=129s",
 		},
 		{
 			name: "Instagram Bot",
 			isActive: false,
 			description:
-				"Automatically sends direct messages on Instagram from a .csv file",
+				"Automatically sends direct messages on Instagram from a .csv file.",
 			highlights: ["Python", "Selenium"],
 			github: "https://github.com/raulcanodev/InstagramBot-AutoDM",
-			url: "https://github.com/raulcanodev/InstagramBot-AutoDM",
+			img: "/images/projects/instagram-bot.jpg",
 		},
 		{
 			name: "Gaming News",
 			isActive: true,
-			description: "Web layout without external frameworks or libraries",
-			highlights: ["DummyWeb", "HTML5", "CSS3", "JS"],
+			description: "Web layout without external frameworks or libraries.",
+			highlights: ["HTML5", "CSS3", "JS"],
 			url: "https://css3-gaming-news.vercel.app/",
+			img: "/images/projects/gaming-news.png",
 		},
 		{
 			name: "Marketing Agency",
 			isActive: true,
-			description: "Web layout without external frameworks or libraries",
-			highlights: ["DummyWeb", "HTML5", "CSS3", "JS"],
+			description: "Web layout without external frameworks or libraries.",
+			highlights: ["HTML5", "CSS3", "JS"],
 			url: "https://marketing-agency-web.vercel.app/",
+			img: "/images/projects/marketing-agency.png",
 		},
 	],
 };
