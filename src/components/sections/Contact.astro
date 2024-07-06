@@ -1,6 +1,7 @@
 ---
 import { content } from "@content_en";
 import Copy from "@/icons/copy.astro";
+import Section from "@/components/Section.astro";
 
 const { name, linkedin, github, email } = content.basics;
 ---
@@ -25,124 +26,122 @@ const { name, linkedin, github, email } = content.basics;
 		}
 	});
 </script>
-<section id="contact" class="">
-	<div>
-		<h2 class="text-3xl font-bold mb-4 uppercase">
-			Find Raul on the internet
-		</h2>
-	</div>
-	<div class="w-full">
-		<!-- CONTACTS -->
-		<div class="flex align-center mt-8">
-			<ul>
-				<li>
-					<p
-						class="flex items-center gap-2 hover:text-green-500 hover:underline copy cursor-pointer">
-						<span id="emailDisplay">{email}</span>
-						<a class="copy"><Copy /></a>
-					</p>
-				</li>
-				<li>
-					<a
-						class="hover:text-green-500 hover:underline"
-						target="_blank"
-						href={linkedin}>
-						LinkedIn &#8599;
-					</a>
-				</li>
-				<li>
-					<a
-						target="_blank"
-						class="hover:text-green-500 hover:underline"
-						href={github}>GitHub &#8599;</a
-					>
-				</li>
-			</ul>
-		</div>
-		<!-- PINPON ANIMATION -->
-		<div class="wrapper hidden md:block">
-			<div class="left_wall"></div>
-			<div class="ball"></div>
-			<div class="right_wall"></div>
-			<div class="clear"></div>
-		</div>
-	</div>
-</section>
 
-<style is:global>
-	.wrapper {
-		margin: 0 auto;
-		width: 600px;
-		height: 300px;
-		border-bottom: 1px solid var(--text);
-	}
-	.clear {
-		clear: both;
-	}
-	.left_wall {
-		float: left;
-		width: 2px;
-		height: 100px;
-		background: var(--text);
-		animation: left-wall 3s infinite;
-	}
-	.right_wall {
-		float: right;
-		width: 2px;
-		height: 100px;
-		background: var(--text);
-		animation: right-wall 3s infinite;
-	}
-	.ball {
-		float: left;
-		width: 10px;
-		height: 10px;
-		background: var(--text);
-		border-radius: 50%;
-		margin-top: 30px;
-		animation: bounce_ball 3s linear infinite;
-	}
-	@keyframes left-wall {
-		0% {
-			margin-top: 0px;
+<Section title="Find Raul on the internet">
+
+		<div class="w-full">
+			<!-- CONTACTS -->
+			<div class="flex align-center">
+				<ul>
+					<li>
+						<p
+							class="flex items-center gap-2 hover:text-green-500 hover:underline copy cursor-pointer">
+							<span id="emailDisplay">{email}</span>
+							<a class="copy"><Copy /></a>
+						</p>
+					</li>
+					<li>
+						<a
+							class="hover:text-green-500 hover:underline"
+							target="_blank"
+							href={linkedin}>
+							LinkedIn &#8599;
+						</a>
+					</li>
+					<li>
+						<a
+							target="_blank"
+							class="hover:text-green-500 hover:underline"
+							href={github}>GitHub &#8599;</a
+						>
+					</li>
+				</ul>
+			</div>
+			<!-- PINPON ANIMATION -->
+			<div class="wrapper hidden md:block">
+				<div class="left_wall"></div>
+				<div class="ball"></div>
+				<div class="right_wall"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</Section>
+
+	<style is:global>
+		.wrapper {
+			margin: 0 auto;
+			width: 600px;
+			height: 300px;
+			border-bottom: 1px solid var(--text);
 		}
-		25% {
-			margin-top: 200px;
+		.clear {
+			clear: both;
 		}
-		100% {
-			margin-top: 0px;
+		.left_wall {
+			float: left;
+			width: 2px;
+			height: 100px;
+			background: var(--text);
+			animation: left-wall 3s infinite;
 		}
-	}
-	@keyframes right-wall {
-		0% {
-			margin-top: 200px;
+		.right_wall {
+			float: right;
+			width: 2px;
+			height: 100px;
+			background: var(--text);
+			animation: right-wall 3s infinite;
 		}
-		50% {
-			margin-top: 0px;
-		}
-		100% {
-			margin-top: 200px;
-		}
-	}
-	@keyframes bounce_ball {
-		0% {
+		.ball {
+			float: left;
+			width: 10px;
+			height: 10px;
+			background: var(--text);
+			border-radius: 50%;
 			margin-top: 30px;
+			animation: bounce_ball 3s linear infinite;
 		}
-		25% {
-			margin-left: 280px; /* Ball goes to the floor */
-			margin-top: 292px;
+		@keyframes left-wall {
+			0% {
+				margin-top: 0px;
+			}
+			25% {
+				margin-top: 200px;
+			}
+			100% {
+				margin-top: 0px;
+			}
 		}
-		50% {
-			margin-left: 585px; /* Ball goes to the right wall top */
-			margin-top: 30px;
+		@keyframes right-wall {
+			0% {
+				margin-top: 200px;
+			}
+			50% {
+				margin-top: 0px;
+			}
+			100% {
+				margin-top: 200px;
+			}
 		}
-		75% {
-			margin-left: 280px; /* Ball goes to the floor */
-			margin-top: 292px;
+		@keyframes bounce_ball {
+			0% {
+				margin-top: 30px;
+			}
+			25% {
+				margin-left: 280px; /* Ball goes to the floor */
+				margin-top: 292px;
+			}
+			50% {
+				margin-left: 585px; /* Ball goes to the right wall top */
+				margin-top: 30px;
+			}
+			75% {
+				margin-left: 280px; /* Ball goes to the floor */
+				margin-top: 292px;
+			}
+			100% {
+				margin-left: 0px;
+				margin-top: 30px;
+			}
 		}
-		100% {
-			margin-left: 0px;
-			margin-top: 30px;
-		}
-	}
-</style>
+	</style>
+</Section>

@@ -17,6 +17,7 @@ import Wordpress from "@/icons/wordpress.astro";
 import Python from "@/icons/python.astro";
 import SASS from "@/icons/sass.astro";
 import { content } from "@content_en";
+import Section from "@/components/Section.astro";
 
 const skills = content.skills;
 
@@ -41,8 +42,7 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<section class="">
-  <h2 class="font-bold text-3xl uppercase mb-5 pb-5">Skills</h2>
+<Section title="Skills">
 	<ul class="inline-flex flex-wrap gap-2">
 		{
 			skills.map(({ name }) => {
@@ -58,4 +58,4 @@ const SKILLS_ICONS: Record<string, any> = {
 			})
 		}
 	</ul>
-</section>
+</Section>

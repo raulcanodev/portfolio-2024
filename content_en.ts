@@ -72,7 +72,7 @@ interface Content {
 export const content: Content = {
 	basics: {
 		name: "Raul Cano",
-		label: "Full Stack Developer",
+		label: "IS A DEVELOPER",
 		summary:
 			"Junior Full Stack Developer at WidgiLabs, where I create WordPress plugins that empower clients to customize their websites directly through the CMS. My work involves developing features with PHP and React, and designing frontend previews with CSS, HTML, PHP, and JavaScript.",
 		summary2:
@@ -192,6 +192,7 @@ export const content: Content = {
 		{ name: "JavaScript" },
 		{ name: "React" },
 		{ name: "Wordpress" },
+		{ name: "PHP" },
 		{ name: "Astro" },
 		{ name: "Next.js" },
 		{ name: "Python" },

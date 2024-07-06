@@ -1,5 +1,6 @@
 ---
 import GitHub from "@/icons/GitHub.astro";
+import Section from "@/components/Section.astro";
 import { content } from "@content_en";
 
 const projects = content.projects;
@@ -48,8 +49,7 @@ const projects = content.projects;
 	});
 </script>
 
-<section class="projects-section">
-	<h2 class="font-bold text-3xl uppercase mb-5">Projects</h2>
+<Section title="Projects">
 
 	{
 		projects.map(
@@ -152,4 +152,4 @@ const projects = content.projects;
 			}
 		)
 	}
-</section>
+</Section>

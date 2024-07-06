@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title = "Section Name" } = Astro.props;
+
+
+---
+
+<section class="section mt-[4rem]">
+	<h2 class="font-bold text-3xl uppercase mb-4">{title}</h2>
+	<slot />
+</section>
+
+

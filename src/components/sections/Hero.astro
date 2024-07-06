@@ -3,8 +3,30 @@ import { content } from "@content_en";
 import { Image } from "astro:assets";
 import Preview from "@/components/blog/Preview.astro";
 
-const { name } = content.basics;
+const { name, label, summary, summary2 } = content.basics;
 ---
+
+<script>
+	const label = document.querySelector("h2");
+	const labelContent = label?.textContent;
+
+	// effect keyboard type for labelcontent
+	var i = 0;
+	var txt = "IS A DEVELOPER"; /* The text */
+	var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+	function typeWriter() {
+		if (i < txt.length) {
+			document.getElementById("label").innerHTML += txt.charAt(i);
+			i++;
+			setTimeout(typeWriter, speed);
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		typeWriter();
+	});
+</script>
 
 <section class="mb-28">
 	<div
@@ -12,7 +34,7 @@ const { name } = content.basics;
 		<div class="order-2 md:order-1 flex justify-center items-center">
 			<div class="w-[8rem] h-[8rem] relative">
 				<img
-					class="w-full h-full object-cover rounded-full"
+					class="w-full h-full object-cover rounded-full transition-all hover:rotate-45"
 					src="/round_profile.png"
 					alt="A bird."
 				/>
@@ -20,27 +42,24 @@ const { name } = content.basics;
 		</div>
 
 		<div class="order-1 md:order-2 flex flex-col">
-			<div class="font-bold">
 				<h1
 					class="text-5xl font-bold text-center md:text-left uppercase dark:text-green-500">
 					{name}
 				</h1>
-			</div>
-			<div class="mt-4">
 				<h2
-					class="text-2xl uppercase font-bold text-center md:text-left text-gray-700 dark:text-gray-300">
-					Is a developer
-				</h2>
+				id="label"
+					class="text-2xl mt-3 uppercase font-bold text-center md:text-left text-gray-700 dark:text-gray-300">
+
 			</div>
 		</div>
 	</div>
 	<div class="mt-[5rem]">
 		<p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
-			Junior full stack developer specialized in web development, I'm 27
-			years old and I live in Lisbon. My mother says that I developed this
-			love for programming because when I was a child, I always played
-			with Legos, and this is like digital Legos for adults, maybe she's
-			right.
+			{summary}
+		</p>
+		<p
+			class="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+			{summary2}
 		</p>
 	</div>
 </section>
