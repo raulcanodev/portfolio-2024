@@ -23,7 +23,21 @@ const { Content } = await entry.render();
 	<Navbar />
 
 	<article class="blog max-w-3xl mx-auto md:px-0">
-		<h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
+		<a href="/blogs" class="flex items-center gap-1 hover:underline">
+			<svg
+				class="w-3 h-3"
+				fill="white"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 320 512"
+				><path
+					d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+				></path></svg
+			>
+			<span class="dark:text-white text-sm">All blogs</span>
+		</a>
+		<h1 class="text-4xl font-bold mb-4 dark:text-green-500">
+			{entry.data.title}
+		</h1>
 
 		<p class="text-white text-sm mb-4">
 			By {entry.data.author} on {formatDate(entry.data.pubDate)}
@@ -47,23 +61,41 @@ const { Content } = await entry.render();
 
 <style is:global>
 	.blog p {
-		margin: 20px 0;
+		margin: 1rem 0;
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: #ccc; /* Color de texto gris claro */
 	}
 
 	.blog h1 {
-		margin-top: 5rem;
+		margin-top: 4rem;
+		font-size: 2.5rem;
+		color: #fff; /* Color de texto blanco */
 	}
 
 	.blog h2 {
-		margin: 1rem 0;
-		font-size: 1.8rem;
+		margin: 2rem 0 1rem;
+		font-size: 2rem;
+		color: #fff;
 	}
+
 	.blog ul {
-		display: flex;
-		flex-direction: column;
-		line-height: 1.8;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 1rem;
 		padding: 1rem;
-		border: 1px solid var(--white);
+		border-bottom: 1px solid #fff; 
+		list-style-type: none;
+	}
+
+	.blog li {
+		padding: 0.5rem;
+		background-color: rgba(
+			255,
+			255,
+			255,
+			0.1
+		); 
 	}
 
 	.blog li:hover a {
@@ -73,6 +105,16 @@ const { Content } = await entry.render();
 	@media (max-width: 768px) {
 		.blog h1 {
 			margin-top: 2rem;
+			font-size: 2rem;
+		}
+
+		.blog h2 {
+			font-size: 1.8rem;
+		}
+
+		.blog ul {
+			grid-template-columns: 1fr;
+			padding: 0.5rem;
 		}
 	}
 </style>
