@@ -191,6 +191,9 @@ export const content: Content = {
 		{ name: "CSS" },
 		{ name: "JavaScript" },
 		{ name: "React" },
+		{ name: "Wordpress" },
+		{ name: "Astro" },
+		{ name: "Next.js" },
 		{ name: "Python" },
 	],
 	languages: [

@@ -1,0 +1,61 @@
+---
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import JavaScript from "@/icons/javascript.astro";
+import TypeScript from "@/icons/type.astro";
+import React from "@/icons/react.astro";
+import Node from "@/icons/node.astro";
+import SQL from "@/icons/sql.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import Next from "@/icons/next.astro";
+import Bootstrap from "@/icons/bootstrap.astro";
+import Flask from "@/icons/flask.astro";
+import Django from "@/icons/django.astro";
+import Wordpress from "@/icons/wordpress.astro";
+import Python from "@/icons/python.astro";
+import SASS from "@/icons/sass.astro";
+import { content } from "@content_en";
+
+const skills = content.skills;
+
+const SKILLS_ICONS: Record<string, any> = {
+	HTML,
+	CSS,
+	JavaScript,
+	TypeScript,
+	React,
+	Node,
+	SQL,
+	Git,
+	GitHub,
+	Next,
+	Bootstrap,
+	Tailwind,
+	Flask,
+	Django,
+	Python,
+	SASS,
+	Wordpress,
+};
+---
+
+<section class="">
+  <h2 class="font-bold text-3xl uppercase mb-5 pb-5">Skills</h2>
+	<ul class="inline-flex flex-wrap gap-2">
+		{
+			skills.map(({ name }) => {
+				const iconName = name === "Next.js" ? "Next" : name;
+				const Icon = SKILLS_ICONS[iconName];
+
+				return (
+					<li class="flex items-center gap-1 border border-gray-200 text-black dark:text-white text-sm font-medium px-2 py-1">
+						{Icon && <Icon className="w-4 h-4 mr-1" />}
+						<span>{name}</span>
+					</li>
+				);
+			})
+		}
+	</ul>
+</section>
