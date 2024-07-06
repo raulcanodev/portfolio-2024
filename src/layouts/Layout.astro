@@ -23,13 +23,13 @@ const { title = "Raul Cano" } = Astro.props;
 		<slot />
 		<div class="cursor"></div>
 		<script>
-			// const cursor = document.querySelector(".cursor") as HTMLElement;
-			// if (cursor) {
-			// 	document.addEventListener("mousemove", (e) => {
-			// 		cursor.style.left = e.pageX + "px";
-			// 		cursor.style.top = e.pageY + "px";
-			// 	});
-			// }
+			const cursor = document.querySelector(".cursor") as HTMLElement;
+			if (cursor) {
+				document.addEventListener("mousemove", (e) => {
+					cursor.style.left = e.pageX + "px";
+					cursor.style.top = e.pageY + "px";
+				});
+			}
 		</script>
 	</body>
 	<Footer />
@@ -80,7 +80,7 @@ const { title = "Raul Cano" } = Astro.props;
 				20px 20px;
 			/* letter-spacing: -0.025rem; */
 			scroll-behavior: smooth;
-			/* cursor: none; */
+			cursor: none;
 		}
 		body,
 		figure {
@@ -95,7 +95,7 @@ const { title = "Raul Cano" } = Astro.props;
 			box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
 			-webkit-box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
 			-moz-box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
-			/* cursor: none; */
+			cursor: none;
 			z-index: 99;
 		}
 
@@ -122,6 +122,7 @@ const { title = "Raul Cano" } = Astro.props;
 		*::before,
 		*::after {
 			box-sizing: border-box;
+			cursor: none;
 		}
 
 		h1,
@@ -151,6 +152,9 @@ const { title = "Raul Cano" } = Astro.props;
 			margin: 0;
 			text-wrap: pretty;
 		}
+		button{
+			cursor: none;
+		}
 
 		section{
 			margin: 3rem 0;
@@ -169,20 +173,20 @@ const { title = "Raul Cano" } = Astro.props;
 		}
 
 		/* CURSOR IF YOU AD AN EMOJI IN THE CURSOR DIV */
-		/* .cursor {
+		.cursor {
 			position: absolute;
 			width: 20px;
 			height: 20px;
 			font-size: 30px;
 			border-radius: 50%;
 			transition: 0.1s;
-			transform: translate(30%, 50%);
+			transform: translate(-50%, -50%);
 			pointer-events: none;
 			mix-blend-mode: difference;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-		} */
+		}
 
 		p:hover ~ .cursor {
 			transform: scale(2);
