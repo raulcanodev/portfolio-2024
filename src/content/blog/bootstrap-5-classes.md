@@ -8,7 +8,7 @@ linkAuthor: 'https://x.com/raulcanodev'
 image: '/blog/bootstrap-5-classes.webp'
 tags: ['life', 'career', 'tech']
 slug: bootstrap-5-classes
-category: 'mindset'
+category: 'Bootstrap 5'
 ---
 
 
