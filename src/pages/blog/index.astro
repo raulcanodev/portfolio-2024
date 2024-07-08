@@ -40,6 +40,14 @@ const blogsForPage = filteredBlogs.slice(
 	(currentPage - 1) * POSTS_PER_PAGE,
 	currentPage * POSTS_PER_PAGE
 );
+
+// Sort the posts by date
+const sortPostsByDate = blogsForPage.sort((a, b) => {
+	const dateA = a.data.pubDate;
+	const dateB = b.data.pubDate;
+
+	return dateB - dateA;
+});
 ---
 
 <Layout title="Blog | Raul Cano">
@@ -64,7 +72,7 @@ const blogsForPage = filteredBlogs.slice(
 			</select>
 		</form>
 		{
-			blogsForPage.map((post: any) => (
+			sortPostsByDate.map((post: any) => (
 				<PreviewImagen
 					image={post.data.image}
 					category={post.data.category}

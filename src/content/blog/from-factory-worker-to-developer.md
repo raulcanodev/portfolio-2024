@@ -1,7 +1,7 @@
 ---
 title: 'From Factory Worker to Developer: The Trigger'
 summary: 'Sometimes, the worst moments can be the start of the best chapters of your life. Embrace change and be grateful for every challenge.'
-pubDate: 2024-06-07
+pubDate: 2024-07-07
 emoji: '💻'
 author: 'Raul Cano'
 linkAuthor: 'https://x.com/raulcanodev'
