@@ -1,6 +1,6 @@
 ---
 title: 'Bootstrap 5 Classes'
-summary: 'Sometimes, the worst moments can be the start of the best chapters of your life. Embrace change and be grateful for every challenge.'
+summary: 'Find out almost all the classes available in Bootstrap 5.'
 pubDate: 2024-07-08
 emoji: '💻'
 author: 'Raul Cano'
@@ -11,6 +11,7 @@ slug: bootstrap-5-classes
 category: 'Bootstrap 5'
 ---
 
+Summary for almost all the classes available in Bootstrap 5. This will help you to quickly find the class you need for your project.
 
 # Index
 
