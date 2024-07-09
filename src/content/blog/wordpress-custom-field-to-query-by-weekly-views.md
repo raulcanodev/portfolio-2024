@@ -81,6 +81,8 @@ add_action('reset_daily_views_hook', 'reset_daily_views');
 
 ## 3. Add a New Custom Field to Store Weekly Views With a CRON Event
 
+We will create a new function in `functions.php` to store the daily views in a weekly array. This function will be executed every day to store the daily views in the `weekly_views` custom field.
+
 ```php title="functions.php"
 function add_day_to_week()
 {
@@ -127,6 +129,7 @@ add_action('add_day_to_week_hook', 'add_day_to_week');
 This is a simple sum of the `weekly_views` array. We will create a new function in `functions.php` to store the total weekly views for all posts.
 
 ```php title="functions.php"
+
 function total_weekly_views()
 {
 	$args = array(

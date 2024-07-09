@@ -112,6 +112,19 @@ const { Content } = await entry.render();
 		/* font-weight: bold; */
 	}
 
+	.blog pre{
+		background-color: #000000 !important;
+		color: #fff;
+		border: 1px solid white;
+		padding: 1rem;
+		overflow-x: auto;
+	}
+
+	// display title code in blog
+	.blog pre code {
+		color: #fff;
+	}
+
 	@media (max-width: 768px) {
 		.blog h1 {
 			margin-top: 2rem;
