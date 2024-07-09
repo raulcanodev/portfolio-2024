@@ -1,7 +1,7 @@
 ---
 title: "Add New Custom Field and Query by Weekly Views in WordPress"
 summary:
-    "How can I filter posts by weekly views in WordPress? In this article, we will show you how to add a new custom field to your WordPress posts and query them by weekly views."
+    "How can I filter posts by weekly views in WordPress? In this article, we will show you how to add a new custom field to your WordPress posts and query them by the total views of the week."
 pubDate: 2024-07-08
 emoji: "💻"
 author: "Raul Cano"
@@ -11,12 +11,10 @@ tags: ["wordpress", "php"]
 slug: wordpress-custom-field-to-query-by-weekly-views
 category: "WordPress"
 ---
-How can I filter posts by weekly views in WordPress without external plugins? To achieve this, we will be working with custom fields and the [WordPress CRON event](https://developer.wordpress.org/plugins/cron/scheduling-wp-cron-events/).
-
 WordPress allows you to create new meta_keys for your posts. This is useful when
 you want to store additional information about your posts. 
 
-By the other hand the WordPress CRON event allows you to schedule events to run at specific times. In this case, we will use it to reset the daily views counter every day, store the daily views in a weekly array, and calculate the total weekly views.
+By the other hand the [WordPress CRON event](https://developer.wordpress.org/plugins/cron/scheduling-wp-cron-events/) allows you to schedule events to run at specific times. In this case, we will use it to reset the daily views counter every day, store the daily views in a weekly array, and calculate the total weekly views.
 
 ---
 
