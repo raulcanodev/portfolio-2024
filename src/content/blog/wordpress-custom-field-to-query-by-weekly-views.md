@@ -188,7 +188,7 @@ This code will return the `$query` we can use to loop through the posts.
 ...Filter the loop
 ```
 
-## How To Test It
+## How To Test The CRON Events
 To test the CRON events you can use the [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/) plugin. This plugin allows you to view and control what's happening in the WP-Cron system.
 
 Then you can simulate the CRON events by clicking on the "Run Now" button.
