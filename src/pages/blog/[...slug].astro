@@ -82,7 +82,7 @@ const { Content } = await entry.render();
 		font-weight: 600;
 		color: #fff;
 	}
-	
+
 	.blog h3 {
 		margin: 2rem 0 1rem;
 		font-size: 1.5rem;
@@ -106,11 +106,9 @@ const { Content } = await entry.render();
 		color: var(--contrast);
 	}
 
-	.blog code{
+	.blog code {
 		color: var(--contrast);
-		padding: 0.2rem 0.5rem;
-		border-radius: 0.25rem;
-	
+		/* font-weight: bold; */
 	}
 
 	@media (max-width: 768px) {
@@ -155,5 +153,14 @@ const { Content } = await entry.render();
 
 	.blog tbody tr:hover {
 		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.blog a {
+		color: var(--contrast);
+		text-decoration: underline;
+	}
+
+	.blog a:hover {
+		text-decoration: none;
 	}
 </style>

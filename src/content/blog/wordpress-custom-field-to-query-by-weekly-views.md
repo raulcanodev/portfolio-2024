@@ -11,7 +11,7 @@ tags: ["wordpress", "php"]
 slug: wordpress-custom-field-to-query-by-weekly-views
 category: "WordPress"
 ---
-How can I filter posts by weekly views in WordPress without external plugins? To achieve this, we will be working with custom fields and the WordPress CRON event.
+How can I filter posts by weekly views in WordPress without external plugins? To achieve this, we will be working with custom fields and the [WordPress CRON event](https://developer.wordpress.org/plugins/cron/scheduling-wp-cron-events/).
 
 WordPress allows you to create new meta_keys for your posts. This is useful when
 you want to store additional information about your posts. 
@@ -24,7 +24,7 @@ By the other hand the WordPress CRON event allows you to schedule events to run 
 
 We can add a new custom field in different ways. Without code by using the plugin ACF (Advanced Custom Fields) or with code. In this case, we will use code.
 
-To add a new custom field, WordPress provides the `add_post_meta()` and `update_post_meta()` functions. It's not necessary to use the first one because `update_post_meta()` will add the custom field if it doesn't exist.
+To add a new custom field, WordPress provides the [add_post_meta()](https://developer.wordpress.org/reference/functions/add_post_meta/) and [update_post_meta()](https://developer.wordpress.org/reference/functions/update_post_meta/) functions. It's not necessary to use the first one because update_post_meta() will add the custom field if it doesn't exist.
 
 ### Code for `single.php`
 
@@ -190,6 +190,10 @@ This code will return the `$query` we can use to loop through the posts.
 ...Filter the loop
 ```
 
+## How To Test It
+To test the CRON events you can use the [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/) plugin. This plugin allows you to view and control what's happening in the WP-Cron system.
+
+Then you can simulate the CRON events by clicking on the "Run Now" button.
 
 ## Conclusion
 
