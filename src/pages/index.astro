@@ -6,14 +6,28 @@ import Projects from "@/components/sections/Projects.astro";
 import TopBlog from "@/components/sections/TopBlog.astro";
 import Contact from "@/components/sections/Contact.astro";
 import Skills from "@/components/sections/Skills.astro";
+import PageLoader from "@/components/PageLoader.astro";
 ---
 
 <script>
-
+	document.addEventListener("DOMContentLoaded", function () {
+		setTimeout(function () {
+			const loaderElement = document.getElementById("loader");
+			if (loaderElement) {
+				loaderElement.style.display = "none";
+			}
+			const contentElement = document.getElementById("content");
+			if (contentElement) {
+				contentElement.style.display = "block";
+			}
+		}, 2000);
+	});
 </script>
 
+
 <Layout title="Raul Cano">
-	<main>
+	<PageLoader id="loader" />
+	<main id="content" style="display: none;">
 		<Navbar />
 		<Hero />
 		<TopBlog />
@@ -23,4 +37,4 @@ import Skills from "@/components/sections/Skills.astro";
 	</main>
 </Layout>
 
-<style></style>
+
