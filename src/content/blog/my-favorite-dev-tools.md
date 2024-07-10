@@ -20,8 +20,8 @@ too.
 
 ---
 
-<div class="two-column-container">
-    <div class="column">
+<div class="w-100 flex flex-row flex-wrap justify-between">
+    <div class="">
 
 ### CSS
 
@@ -32,7 +32,7 @@ too.
 -   [Code Quality](https://www.projectwallace.com/css-code-quality)
 -   [Grid Generator](https://cssgrid-generator.netlify.app/)
 -   [Charts Generator](https://chartscss.org/)
--   [Water.css](https://watercss.kognise.dev/) - Manage styling for you
+-   [Water.css](https://watercss.kognise.dev/) 
 -   [Shadow Generator](https://www.joshwcomeau.com/shadow-palette/)
 
 ### Tailwind
@@ -41,9 +41,7 @@ too.
 -   [Background Generator](https://bg.ibelick.com/)
 -   [Daisy UI](https://daisyui.com/)
 -   [Tailwind Components](https://tailwindcomponents.com/)
--   [Tailframes](https://www.tailframes.com/components/accordion) - Tailwind
-    fragments components
-
+-   [Tailframes](https://www.tailframes.com/components/accordion) 
 ### Icons
 
 -   [Tabler Icons](https://tabler.io/icons)
@@ -60,13 +58,12 @@ too.
 
 -   [JSON Data Generator](https://www.jsondataai.com/)
 -   [Tango](https://app.tango.us/sign-in)
--   [LeonardoAI](https://leonardo.ai/) - Create images with AI
+-   [LeonardoAI](https://leonardo.ai/)
 
 ### Security
 
--   [File Scan](https://www.filescan.io/scan) - Scan files for malware
--   [Virus Total](https://www.virustotal.com/gui/home/upload) - Scan files and
-    URLs for malware
+-   [File Scan](https://www.filescan.io/scan)
+-   [Virus Total](https://www.virustotal.com/gui/home/upload)
 
 ### Images
 
@@ -75,14 +72,5 @@ too.
 
 
     </div>
-    </div>
+</div>
 
-<style>
-    .two-column-container {
-        display: flex;
-    }
-
-    .column {
-        flex: 1; 
-    }
-</style>
