@@ -10,24 +10,26 @@ import PageLoader from "@/components/PageLoader.astro";
 ---
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		setTimeout(function () {
-			const loaderElement = document.getElementById("loader");
-			if (loaderElement) {
-				loaderElement.style.display = "none";
-			}
-			const contentElement = document.getElementById("content");
-			if (contentElement) {
-				contentElement.style.display = "block";
-			}
-		}, 1500);
-	});
+	// Initial Fake Loader
+	// document.addEventListener("DOMContentLoaded", function () {
+	// 	setTimeout(function () {
+	// 		const loaderElement = document.getElementById("loader");
+	// 		if (loaderElement) {
+	// 			loaderElement.style.display = "none";
+	// 		}
+	// 		const contentElement = document.getElementById("content");
+	// 		if (contentElement) {
+	// 			contentElement.style.display = "block";
+	// 		}
+	// 	}, 1500);
+	// });
 </script>
 
 
 <Layout title="Raul Cano">
-	<PageLoader id="loader" />
-	<main id="content" style="display: none;">
+	<!-- <PageLoader id="loader" /> -->
+	<!-- <main id="content" style="display: none;"> -->
+	<main>
 		<Navbar />
 		<Hero />
 		<TopBlog />
