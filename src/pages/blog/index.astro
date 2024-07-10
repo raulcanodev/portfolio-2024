@@ -52,7 +52,7 @@ const sortPostsByDate = blogsForPage.sort((a, b) => {
 
 <Layout title="Blog | Raul Cano">
 	<Navbar />
-	<div class="blogs-container">
+	<div class="blogs-container md:mt-10">
 		<form class="mb-3" id="category-form" method="get" action="/blog">
 			<input type="hidden" name="page" value={currentPage} />
 			<select
@@ -95,9 +95,6 @@ const sortPostsByDate = blogsForPage.sort((a, b) => {
 </Layout>
 
 <style>
-	.blogs-container {
-		margin-top: 5rem;
-	}
 	select,
 	select option {
 		text-transform: capitalize;

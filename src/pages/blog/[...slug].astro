@@ -36,13 +36,13 @@ const { Content } = await entry.render();
 			>
 			<span class="dark:text-white text-sm">All blogs</span>
 		</a>
-		<h1 class="text-4xl font-bold mb-4 dark:text-green-500">
+		<h1 class="text-4xl font-bold dark:text-green-500">
 			{entry.data.title}
 		</h1>
 
-		<p>{entry.data.summary}</p>
+		<p class="mb-4">{entry.data.summary}</p>
 
-		<span class="text-gray-400 text-sm mb-4">
+		<span class="text-gray-400 text-sm">
 			{entry.data.author} on {formatDate(entry.data.pubDate)}
 		</span>
 
@@ -64,7 +64,6 @@ const { Content } = await entry.render();
 
 <style is:global>
 	.blog p {
-		margin: 1rem 0;
 		line-height: 1.6;
 		color: var(--blog-content);
 
@@ -72,14 +71,15 @@ const { Content } = await entry.render();
 
 	.blog h1 {
 		margin-top: 4rem;
+		margin-bottom: 2rem;
 		font-size: 2.5rem;
 		font-weight: bold;
 		color: var(--contrast);
 	}
 
 	.blog h2 {
-		margin: 2rem 0 1rem;
-		font-size: 2rem;
+		margin: 2rem 0 0.7rem;
+		font-size: 1.5rem;
 		font-weight: 600;
 		color: #fff;
 	}
@@ -115,6 +115,7 @@ const { Content } = await entry.render();
 		color: #fff;
 		border: 1px solid white;
 		padding: 1rem;
+		margin: 1rem 0;
 		overflow-x: auto;
 	}
 
@@ -174,5 +175,9 @@ const { Content } = await entry.render();
 
 	.blog a:hover {
 		text-decoration: none;
+	}
+
+	.blog hr{
+		margin: 2rem 0;
 	}
 </style>
