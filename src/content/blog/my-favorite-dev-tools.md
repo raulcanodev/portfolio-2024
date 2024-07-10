@@ -35,42 +35,36 @@ too.
 -   [Water.css](https://watercss.kognise.dev/) 
 -   [Shadow Generator](https://www.joshwcomeau.com/shadow-palette/)
 
-### Tailwind
 
+### Tailwind
 -   [Background Patterns](https://www.heropatterns.com/)
 -   [Background Generator](https://bg.ibelick.com/)
 -   [Daisy UI](https://daisyui.com/)
 -   [Tailwind Components](https://tailwindcomponents.com/)
 -   [Tailframes](https://www.tailframes.com/components/accordion) 
-### Icons
 
+### Icons
 -   [Tabler Icons](https://tabler.io/icons)
 -   [SVG Icons](https://icons8.com/icons/set/flask-logo)
 -   [Phosphor Icons](https://phosphoricons.com/)
 -   [SVG to Code](https://nikitahl.github.io/svg-2-code/)
 -   [Illustrations by undraw](https://undraw.co/illustrations)
 -   [Icon Noir](https://iconoir.com/)
-
       </div>
-      <div class="column">
+      <div class="">
 
 ### AI
-
 -   [JSON Data Generator](https://www.jsondataai.com/)
 -   [Tango](https://app.tango.us/sign-in)
 -   [LeonardoAI](https://leonardo.ai/)
 
 ### Security
-
 -   [File Scan](https://www.filescan.io/scan)
 -   [Virus Total](https://www.virustotal.com/gui/home/upload)
 
 ### Images
-
 -   [Shots](https://shots.so/)
 -   [Squoosh](https://squoosh.app/)
-
-
     </div>
 </div>
 

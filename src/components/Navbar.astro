@@ -1,12 +1,9 @@
 ---
 import { content } from "@content_en";
 import ThemeIcon from "./ThemeIcon.astro";
-const { name, domain } = content.basics;
+const { domain } = content.basics;
 
-const { slug } = Astro.props;
 const currentPath = Astro.url.pathname;
-
-console.log("slug", currentPath);
 ---
 
 <nav class="bg-white px-2 py-6 dark:bg-black shadow">
