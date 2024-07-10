@@ -65,9 +65,9 @@ const { Content } = await entry.render();
 <style is:global>
 	.blog p {
 		margin: 1rem 0;
-		font-size: 1rem;
 		line-height: 1.6;
 		color: var(--blog-content);
+
 	}
 
 	.blog h1 {
@@ -92,11 +92,9 @@ const { Content } = await entry.render();
 	}
 
 	.blog ul {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-		gap: 1rem;
-		padding: 1rem;
-		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		/* list-style-type: none; */
 	}
 
 	.blog li {
