@@ -3,9 +3,10 @@ import "@fontsource/lekton";
 import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title = "Raul Cano" } = Astro.props;
+const { title = "Raul Cano", description} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,6 +17,7 @@ const { title = "Raul Cano" } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/round_profile.png" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
 
