@@ -71,7 +71,7 @@ const projects = content.projects;
 							<p id="accordion-flush-heading">
 								<button
 									type="button"
-									class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-customGray border-b border-gray-200 dark:border-gray-700 dark:text-gray-100 gap-3"
+									class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-customGray border-b border-gray-700 dark:border-gray-700 dark:text-gray-100 gap-3"
 									data-accordion-target="#accordion-flush-body"
 									aria-expanded="true"
 									aria-controls="accordion-flush-body">
@@ -86,7 +86,7 @@ const projects = content.projects;
 								id="accordion-flush-body"
 								class="max-h-0 overflow-hidden transition-all duration-500 ease-out"
 								aria-labelledby="accordion-flush-heading">
-								<div class="flex flex-col md:flex-row justify-between gap-4 py-5 border-b border-gray-200 dark:border-gray-700">
+								<div class="flex flex-col md:flex-row justify-between gap-4 py-5">
 									<div class="md:w-1/3">
 										<img
 											src={img}
@@ -129,14 +129,14 @@ const projects = content.projects;
 									</div>
 
 									<div class="md:w-2/3 flex flex-col gap-4 justify-between pl-0 md:pl-5">
-										<p class="mb-2 text-gray-500 dark:text-customGray">
+										<p class="mb-2 text-customGray dark:text-customGray">
 											{description}
 										</p>
 										<div class="mt-auto">
 											<div class="tags flex flex-wrap gap-2">
 												{highlights.map((highlight) => {
 													return (
-														<span class="text-sm border border-gray-200 hover:border-gray-400 text-gray-700 hover:text-gray-400 dark:text-customGray px-2 transition-all cursor-default">
+														<span class="text-sm border border-gray-400 hover:border-gray-400 text-customGray hover:text-gray-400 dark:text-customGray px-2 transition-all cursor-default">
 															{highlight}
 														</span>
 													);

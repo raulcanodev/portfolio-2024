@@ -50,10 +50,8 @@ const SKILLS_ICONS: Record<string, any> = {
 				const Icon = SKILLS_ICONS[iconName];
 
 				return (
-					<li class="flex items-center gap-1 border dark:border-gray-200 hover:border-gray-300 dark:text-customGray text-sm font-medium px-2 py-1 hover:text-customGray transition-all">
-						{Icon && (
-							<Icon className="w-4 h-4 mr-1 " />
-						)}
+					<li class="flex items-center text-customGray gap-1 border dark:border-gray-200 hover:border-gray-300 dark:text-customGray text-sm font-medium px-2 py-1 hover:text-customGray transition-all">
+						{Icon && <Icon className="w-4 h-4 mr-1 " />}
 						<span>{name}</span>
 					</li>
 				);
