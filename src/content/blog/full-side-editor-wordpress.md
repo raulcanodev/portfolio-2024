@@ -54,6 +54,6 @@ git checkout -b remove-full-site-editor
 ```
 Here remove-full-site-editor is the name of the branch, you can name it as you want.
 
-Or if you are using a GUI like SourceTree, do right click and remove the changes.
+Or if you are using a GUI like SourceTree, do right click on the files pending to being commmited and remove them.
 
 Now you will see how the Full-Site Editor is reset to the settings of the theme, same as the Production site.
