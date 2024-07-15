@@ -5,7 +5,7 @@ pubDate: 2024-07-15
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/add-your-folder-path-to-your-file-in-visual-studio-code.webp"
+image: "/blog/what-is-xss.webp"
 tags: ["security", "tech"]
 slug: what-is-xss
 category: "security"
