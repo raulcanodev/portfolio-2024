@@ -10,7 +10,7 @@ const currentPath = Astro.url.pathname;
 	<div class="container flex flex-wrap justify-between items-center mx-auto">
 		<a href="/" class="flex items-center">
 			<span
-				class={`${currentPath === "/" ? "dark:text-green-500 underline underline-offset-8" : ""} self-center uppercase font-bold whitespace-nowrap text-green-500 hover:text-green-500 hover:underline underline-offset-8 hidden md:block font-sans md:text-xl`}
+				class={`${currentPath === "/" ? "dark:text-green-500 underline underline-offset-8" : ""} self-center uppercase font-bold whitespace-nowrap text-green-500 hover:text-green-500 hover:underline underline-offset-8 font-sans md:text-xl`}
 				>{currentPath === "/" ? "" : domain}</span
 			>
 		</a>
