@@ -75,6 +75,7 @@ const sortPostsByDate = blogsForPage.sort((a, b) => {
 			sortPostsByDate.map((post: any) => (
 				<PreviewImagen
 					image={post.data.image}
+					summary={post.data.summary}
 					category={post.data.category}
 					title={post.data.title}
 					pubDate={post.data.pubDate}

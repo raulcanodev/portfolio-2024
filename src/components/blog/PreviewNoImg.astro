@@ -6,11 +6,12 @@ interface Props {
 	slug: string;
 	pubDate: string;
 	author: string;
+	summary: string;
 	linkAuthor: string;
 	descriptionLength: number;
 }
 
-const { title, slug, pubDate, author, linkAuthor, descriptionLength } =
+const { title, slug, pubDate, author, linkAuthor, descriptionLength, summary } =
 	Astro.props;
 const entry = await getEntry("blog", slug);
 

@@ -8,11 +8,13 @@ interface Props {
 	category: string;
 	pubDate: string;
 	author: string;
+	summary: string;
 	linkAuthor: string;
 }
 
-const { title, slug, image, category, pubDate, author, linkAuthor } =
+const { title, slug, image, category, pubDate, author, linkAuthor, summary } =
 	Astro.props;
+
 const entry = await getEntry("blog", slug);
 
 if (!slug) {
@@ -75,7 +77,7 @@ const formattedDate = formatDate(date);
 			>
 		</h2>
 		<p class="text-customGray">
-			{previewText}
+			{summary}
 		</p>
 		<div class="mt-4 text-gray-500 flex justify-between">
 			<span class="font-semibold text-customGray text-sm"
