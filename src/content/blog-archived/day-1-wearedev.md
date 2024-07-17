@@ -7,7 +7,7 @@ author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
 image: "/blog/example.webp"
 tags: [""]
-slug: example
+slug: day1
 category: "example"
 ---
 1- Github copilot

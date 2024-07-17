@@ -7,7 +7,7 @@ author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
 image: "/blog/example.webp"
 tags: [""]
-slug: example
+slug: day3
 category: "example"
 ---
 
