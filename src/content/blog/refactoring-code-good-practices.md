@@ -13,23 +13,32 @@ category: "Performance"
 
 ## Why you should refactor your code
 
-Refactoring code is an essential practice in software development. It helps improve the quality of the codebase, making it more readable, maintainable, and scalable. Here are some reasons why you should refactor your code:
+Refactoring is the process of restructuring existing code without changing its external behavior. This practice is crucial in software development as it helps maintain a high-quality codebase. 
+
+Here are some of the key reasons why refactoring is important:
 
 ### 1. Improve code legibility
 
 Refactoring code helps improve the readability of the codebase. By restructuring the code and removing unnecessary complexity, you can make the code easier to understand for other developers.
 
+Right now you may understand the code you wrote, but what about in a few months or years?
+
+As my favorite meme says: "When I wrote this code, only God and I understood what I was doing. Now, only God knows."
+
 ### 2. Enhance code maintainability
 
-Refactoring code makes it easier to maintain and update the codebase. By breaking down large functions into smaller, more manageable pieces, you can make it easier to fix bugs and add new features.
+Makes it easier to maintain and update the codebase. By breaking down large functions into smaller, more manageable pieces, you can make it easier to fix bugs and add new features.
 
 ### 3. Increase code scalability
 
-Refactoring code helps improve the scalability of the codebase. By restructuring the code and removing unnecessary dependencies, you can make it easier to scale the codebase as your project grows.
+Removing unnecessary dependencies and restructuring the code helps improve the scalability of the codebase. This makes it easier to scale the codebase as your project grows.
+
+You should do reusable code, don't repeat yourself (DRY), and keep it simple, stupid (KISS).
 
 ### 4. Improve code performance
 
-Refactoring code can help improve the performance of the codebase. By optimizing the code and removing bottlenecks, you can make the code run faster and more efficiently.
+Optimizing the code and removing bottlenecks can help improve the performance of the codebase, making the code run faster and more efficiently.
+
 
 ---
 ### Some examples of code refactoring
@@ -67,4 +76,4 @@ def process_data(data):
     return [item.strip().lower().replace(" ", "_") for item in data]
 ```
 
-
+---
