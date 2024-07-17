@@ -28,9 +28,9 @@ const contentText = entry.body;
 
 // Get the first 160 characters of the content
 const previewText =
-	contentText.length > descriptionLength
-		? contentText.substring(0, descriptionLength) + "..."
-		: contentText;
+	summary.length > descriptionLength
+		? summary.substring(0, descriptionLength) + "..."
+		: summary;
 
 const linkPath = `/blog/${slug}`;
 const date = new Date(pubDate);

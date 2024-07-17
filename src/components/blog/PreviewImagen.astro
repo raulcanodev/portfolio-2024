@@ -30,9 +30,9 @@ const contentText = entry.body;
 
 // Get the first 160 characters of the content
 const previewText =
-	contentText.length > 160
-		? contentText.substring(0, 160) + "..."
-		: contentText;
+	summary.length > 160
+		? summary.substring(0, 160) + "..."
+		: summary;
 
 const imagePath = `/images/${image}`;
 const linkPath = `/blog/${slug}`;
