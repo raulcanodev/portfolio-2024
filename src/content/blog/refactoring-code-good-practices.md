@@ -1,6 +1,6 @@
 ---
-title: "Why You Should Refactor Your Code: Improve Readability, Maintainability, and Performance"
-summary: "Refactoring code is a common practice in software development. It is the process of restructuring existing computer code without changing its external behavior. It is essential to maintain the codebase and make it more readable, maintainable, and scalable. In this article, we will discuss the importance of refactoring code, good practices, and tools that can help you refactor your code effectively."
+title: "Why You Should Refactor Your Code"
+summary: "Refactoring code is a common practice in software development. It is the process of restructuring existing computer code without changing its external behavior. It is essential to maintain the codebase and make it more readable, maintainable, and scalable."
 pubDate: 2024-07-17
 emoji: "💻"
 author: "Raul Cano"
@@ -27,7 +27,7 @@ As my favorite meme says: "When I wrote this code, only God and I understood wha
 
 ### 2. Enhance code maintainability
 
-Makes it easier to maintain and update the codebase. By breaking down large functions into smaller, more manageable pieces, you can make it easier to fix bugs and add new features.
+Make it easier to maintain and update the code. By breaking down large functions into smaller, more manageable pieces, you can make it easier to fix bugs and add new features.
 
 ### 3. Increase code scalability
 
@@ -41,24 +41,7 @@ Optimizing the code and removing bottlenecks can help improve the performance of
 
 
 ---
-### Some examples of code refactoring
-
-`Before`
-```python
-def calc_total(products):
-    total_price = 0
-    for product in products:
-        total_price += product['price']
-    return total_price
-```
-
-`After`
-```python
-def calculate_total_price(products):
-    return sum(product['price'] for product in products)
-```
-
----
+Let's see an clear example:
 
 `Before`
 ```python
@@ -75,5 +58,3 @@ def process_data(data):
 def process_data(data):
     return [item.strip().lower().replace(" ", "_") for item in data]
 ```
-
----
