@@ -104,7 +104,14 @@ const { Content } = await entry.render();
 
 	.blog li {
 		padding: 0;
+		margin: 0.3rem 0;
 		color: var(--text);
+		list-style-type: disc;
+	}
+
+	.blog li a {
+		color: var(--text);
+		text-decoration: none;
 	}
 
 	.blog li:hover a {
@@ -174,7 +181,7 @@ const { Content } = await entry.render();
 	.blog a {
 		color: var(--contrast);
 		text-decoration: underline;
-		padding: 0 1rem;
+		padding: 0 0rem;
 	}
 
 	.blog a:hover {
