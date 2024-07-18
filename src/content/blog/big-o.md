@@ -1,7 +1,7 @@
 ---
 title: "Big O Notation"
 summary: "We all know that algorithms are important, but how do we measure their efficiency? Big O notation is here to help us with that."
-pubDate: 2024-07-19
+pubDate: 2024-07-18
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
