@@ -20,6 +20,8 @@ category: "Algorithms"
 - [Big O: O(n^2)](#big-o-on2)
 - [Big O: Drop Non-Dominant Terms](#big-o-drop-non-dominant-terms)
 - [Big O: O(log n)](#big-o-olog-n)
+- [What if we have O(n) but with two different arguments?](#what-if-we-have-on-but-with-two-different-arguments)
+- [Big O: Array Operations](#big-o-array-operations)
 - [Better understanding](#better-understanding)
 ---
 ## Big O Notation
@@ -41,7 +43,7 @@ We measure the space complexity in the amount of memory that an algorithm uses. 
 
 ---
 
-## Big O: O(1)
+## Big O: O(1) - Most Efficient 🟢
 
 O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data set. 
 
@@ -56,7 +58,7 @@ function doSomethingElse(n) {
 ```
 It doesn't matter if `n` is 1 or 1,000,000, the number of operations will be one `O(1)`.
 
-## Big O: O(n)
+## Big O: O(n) - Medium Efficient 🟡
 
 O(n) describes an algorithm whose performance will grow linearly and in direct proportion to the size of the input data set.
 
@@ -78,7 +80,7 @@ function doSomethingElse(array) {
 ```
 The second function will be `O(n + n)` or `O(2n)` but we drop the constant, so it will be `O(n)`. We drop it because it doesn’t matter if it’s 2n or 100n, it will grow linearly.
 
-## Big O: O(n^2)
+## Big O: O(n^2) - Less Efficient 🔴
 
 O(n^2) represents an algorithm whose performance is directly proportional to the square of the size of the input data set. 
 
@@ -92,7 +94,7 @@ function doSomething(n) {
 }
 ```
 
-## Big O: Drop Non-Dominant Terms
+## Big O: Drop Non-Dominant Terms 
 
 When you have multiple terms in a Big O notation, you drop the non-dominant terms. 
 
@@ -114,7 +116,7 @@ N squared is the dominant term, because imagine that `n` is 100, then `n^2` is 1
 
 So it will result in `O(n^2)`.
 
-## Big O: O(log n)
+## Big O: O(log n) - More Efficient 🟢
 
 Linear Search (`O(n)`): To find an element, you might have to check every element. For an array of size 8, this could take up to 8 steps.
 
@@ -133,6 +135,35 @@ Step 2: Compare with middle element `2`, new search space: `1 | 2`
 Step 3: Find `1`
 
 For `8` elements, `log2(8) = 3`, so time complexity is `O(log n)`. For `1,000,000` elements, it takes about `20` steps, making binary search much faster than linear search.
+
+## What if we have O(n) but with two different arguments? 
+
+```javascript
+function doSomething(a, b){
+  for (let i = 0; i < a; i++) {
+    console.log(i);
+  }
+  for (let j = 0; j < b; j++) {
+    console.log(j);
+  }
+}
+```
+
+You may think that is `O(n)` but it's not. It's `O(a + b)` because we are not sure if `a` and `b` are the same. So we can't drop the constant.
+
+
+
+
+## Big O: Array Operations
+
+- Pushing `push()` to the end of an array is `O(1)` because you are just adding an element. 
+- Popping `pop()` from the end of an array is `O(1)` because you are just removing the last element.
+- Shifting `shift()` elements from the beginning of an array is `O(n)` because you have to re-index all the elements.
+- Unshifting `unshift()` elements to the beginning of an array is `O(n)` because you have to re-index all the elements.
+- Splicing `splice()` is `O(n)` because you have to re-index all the elements.
+- Concatenating `concat()` is `O(n)` because you have to copy all the elements to a new array.
+- Sorting `sort()` is `O(n log n)` because it uses a comparison sort algorithm.
+
 
 ## Better understanding
 
