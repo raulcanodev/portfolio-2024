@@ -116,30 +116,23 @@ So it will result in `O(n^2)`.
 
 ## Big O: O(log n)
 
-Imagine you have an array of size 8. If you have to search for an element in the array, you will have to iterate through all the elements, what would be `O(n)`.
+Linear Search (`O(n)`): To find an element, you might have to check every element. For an array of size 8, this could take up to 8 steps.
 
-But with a binary search, you can find the element in 3 steps.
+Binary Search (`O(log n)`): Efficiently finds an element by repeatedly dividing the array in half.
 
-Lets say we want to look for number `1` in the array:
+Example
+
+To find 1 in the array:
 
 `1 | 2 | 3 | 4 | 5 | 6 | 7 | 8`
-<br>
-`1 | 2 | 3 | 4`
-<br>
-`1 | 2`
-<br>
-`1` With just 3 steps by dividing the array in half each time.
 
-Hence, 2 to what number is 8? 2^3 = 8 what is `log2(8) = 3`. So the time complexity is `O(log n)`.
+Step 1: Compare with middle element `4`, new search space: `1 | 2 | 3 | 4`
 
-So just imagine, you have an array of 1,000,000 elements, you will find the element in 20 steps. How crazy is that?
+Step 2: Compare with middle element `2`, new search space: `1 | 2`
 
-In a function like this:
+Step 3: Find `1`
 
-
-`O(log n)` is the best time complexity. It's the most efficient one. 
-In this case, the number of operations will grow logarithmically. 
-
+For `8` elements, `log2(8) = 3`, so time complexity is `O(log n)`. For `1,000,000` elements, it takes about `20` steps, making binary search much faster than linear search.
 
 ## Better understanding
 
