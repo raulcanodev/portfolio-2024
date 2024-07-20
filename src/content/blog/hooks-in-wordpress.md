@@ -80,4 +80,9 @@ There are some plugins that can help you to work with hooks in WordPress.
 
 [Simply Show Hooks](https://wordpress.org/plugins/simply-show-hooks/) This plugin will show you all the hooks in the current page.
 
+<img src="https://i.pinimg.com/originals/94/fe/cf/94fecfe4d68614636eeb4e21af0f68b4.png" alt="Simply Show Hooks" width="500" height="300" >
+<br>
+
 If you want to see the order of when the hooks are executed, you can use the [Debug Bar Actions and Filters Addon](https://wordpress.com/plugins/debug-bar-actions-and-filters-addon).
+
+<img src="https://ps.w.org/debug-bar-actions-and-filters-addon/assets/banner-772x250.png?rev=1322500" alt="Debug Bar Actions and Filters Addon" width="500" height="300" >
