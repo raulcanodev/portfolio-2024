@@ -50,7 +50,7 @@ const { Content } = await entry.render();
 				<img
 					src={`/images/${entry.data.image}`}
 					alt="Article Image"
-					class="w-full h-auto aspect-video my-6"
+					class="w-full h-auto aspect-video my-6 object-cover"
 				/>
 			)
 		}
@@ -63,10 +63,12 @@ const { Content } = await entry.render();
 
 <style is:global>
 	.blog p {
-		line-height: 1.6;
-		margin: 0.6rem 0;
+		line-height: 1.3;
+		margin: 1rem 0;
 		padding: 0;
 		color: var(--blog-content);
+
+		/* letter-spacing: 0.05rem; */
 	}
 
 	.blog h1 {
