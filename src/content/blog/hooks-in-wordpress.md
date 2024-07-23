@@ -11,6 +11,17 @@ slug: hooks-in-wordpress
 category: "WordPress"
 ---
 
+## Index
+
+- [Hooks in WordPress](#hooks-in-wordpress)
+  - [Action Hooks](#action-hooks)
+    - [The two functions `do_action` and `add_action`](#the-two-functions-do_action-and-add_action)
+    - [Priority](#priority)
+  - [Filters Hooks](#filters-hooks)
+    - [apply_filters()](#apply_filters)
+    - [add_filter()](#add_filter)
+  - [Tools](#tools)
+
 ## Hooks in WordPress
 
 WordPress gives us two hooks to work with: actions and filters. That will allow us to modify the behavior of WordPress without modifying the core files.
@@ -87,12 +98,45 @@ add_action('wp_enqueue_scripts', 'add_stylesheet_function', 9999);
 
 ## Filters Hooks
 
-Filters hijack the data and modify it before it is sent to the browser. They are used to modify the data before it is displayed on the screen.
+Unlike the action hooks, that don't return any value to the function that call them, the filters hooks do. They allow you to modify the data before it is sent to the browser.
 
-You take the data WordPress gives you by default, hijack it, and modify it before it is sent to the browser.
+Filters *works through a pair of functions*: `apply_filters()` and `add_filter()`.
 
-For example imagine if you want to add the corporation name to the end of the title of every post. You can achieve this by using a filter.
+### apply_filters()
+[apply_filters()](https://developer.wordpress.org/reference/functions/apply_filters/): Is the one that defines the filter hook within the WordPress code.
 
+```php
+$content = apply_filters('the_content', $content, 'This is additional text');
+```
+
+The first argument is the name of the filter, and the second is the data that will be filtered.
+
+### add_filter()
+[add_filter()](https://developer.wordpress.org/reference/functions/add_filter/): Tells WordPress to run the function you specify when the filter is triggered.
+
+
+The `add_filter()` function has up to four parameters:
+
+1- The name of the filter.
+
+2- The function that will be executed when the filter is triggered.
+
+3- The priority of the function. The lower the number, the earlier the function is executed. `(Optional)`(Default is 10)
+
+4- The number of arguments that the function accepts. `(Optional)` (Default is 1)
+
+
+```php
+function modify_contet($content, $additional_text) {
+    return $content . ' - ' . $additional_text;
+}
+
+add_filter('the_content', 'modify_contet', 10, 2);
+```
+
+Here we are adding a filter to the `the_content` filter hook. When the `the_content` filter hook is triggered, the `modify_content` function will be executed. The function will receive two arguments, the content and the additional text.
+
+WordPress has as least 2000 filters, so you can modify almost everything in WordPress. [Here](https://developer.wordpress.org/apis/hooks/filter-reference/) you can see a lot of the filters in WordPress.
 
 ## Tools
 
