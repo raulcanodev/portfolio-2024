@@ -29,12 +29,6 @@ Actions hooks have two parameters: the name of the action and the function that 
 For example, if you want to add a new menu item to the admin bar, you can use the `admin_bar_menu` action hook. This action hook is triggered when the admin bar is being built.
 
 ```php
-add_action('admin_bar_menu', 'add_new_menu_item');
-
-/* When the admin_bar_menu action is build
-* the function add_new_menu_item will be executed
-*/
-
 function add_new_menu_item($wp_admin_bar) {
     $args = array(
         'id' => 'new_menu_item',
@@ -48,7 +42,33 @@ function add_new_menu_item($wp_admin_bar) {
 
     $wp_admin_bar->add_node($args);
 }
+add_action('admin_bar_menu', 'add_new_menu_item');
+/* When the admin_bar_menu action is build
+* the function add_new_menu_item will be executed
+*/
 ```
+
+### The two functions `do_action` and `add_action`
+
+[add_action()](https://developer.wordpress.org/reference/functions/add_action/):  You use this to tell WordPress, “Hey, when this event happens, make sure to run this function.” You’re just giving instructions for later.
+
+[do_action()](https://developer.wordpress.org/reference/functions/do_action/): This is used to trigger the action. It tells WordPress, “Hey, this event has happened, so run all the functions that are hooked to it.”
+
+```php
+do_action('admin_bar_menu');
+```
+
+```php
+add_action('admin_bar_menu', 'add_new_menu_item');
+add_action('admin_bar_menu', 'add_another_menu_item');
+```
+
+
+*Does the add_action run the function itself?*
+
+No, `add_action()` does not run the function itself. It only tells WordPress to run the function later when the action is triggered by `do_action()`.
+
+
 
 ### Priority
 
