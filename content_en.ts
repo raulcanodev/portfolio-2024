@@ -213,7 +213,7 @@ export const content: Content = {
 			github: "https://github.com/raulcanodev/best-template-chrome-extension",
 		},
 		{
-			name: "Generate Blog AI",
+			name: "Generate BlogAI - OpenAI",
 			isActive: false,
 			description:"Next.js app with OpenAI's GPT-3 to generate blog posts.",
 			highlights: ["Next.js", "OpenAI", "Stripe", "Tailwind CSS"],
@@ -221,7 +221,7 @@ export const content: Content = {
 			github: "https://github.com/raulcanodev/openai-api-nextjs-to-generate-blogs?tab=readme-ov-file",
 		},
 		{
-			name: "ForoGeeks (Forum)",
+			name: "Forum 'ForoGeeks'",
 			isActive: false,
 			description:
 				"Forum based in Reddit. Users can create threads, comment, like, report threads, and much more.",
@@ -240,20 +240,12 @@ export const content: Content = {
 			img: "/images/projects/instagram-bot.jpg",
 		},
 		{
-			name: "Gaming News",
+			name: "Web Layout | Gaming News",
 			isActive: true,
 			description: "Web layout without external frameworks or libraries.",
 			highlights: ["HTML5", "CSS3", "JS"],
 			url: "https://css3-gaming-news.vercel.app/",
 			img: "/images/projects/gaming-news.png",
-		},
-		{
-			name: "Marketing Agency",
-			isActive: true,
-			description: "Web layout without external frameworks or libraries.",
-			highlights: ["HTML5", "CSS3", "JS"],
-			url: "https://marketing-agency-web.vercel.app/",
-			img: "/images/projects/marketing-agency.png",
-		},
+		}
 	],
 };
