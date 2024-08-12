@@ -204,6 +204,23 @@ export const content: Content = {
 	],
 	projects: [
 		{
+			name: "Best Template Chrome Extension",
+			isActive: false,
+			description:"Effortlessly organize and manage your templates with our intuitive extension.",
+			highlights: ["React", "Chrome Extension"],
+			img: "/images/projects/best-template.jpg",
+			url: "https://chromewebstore.google.com/detail/best-template/dfdmabpbgnnmhldhmlpikbklcicaekoh",
+			github: "https://github.com/raulcanodev/best-template-chrome-extension",
+		},
+		{
+			name: "Generate Blog AI",
+			isActive: false,
+			description:"Next.js app with OpenAI's GPT-3 to generate blog posts.",
+			highlights: ["Next.js", "OpenAI", "Tailwind CSS"],
+			img: "/images/projects/blogai.png",
+			github: "https://github.com/raulcanodev/openai-api-nextjs-to-generate-blogs?tab=readme-ov-file",
+		},
+		{
 			name: "ForoGeeks (Forum)",
 			isActive: false,
 			description:
