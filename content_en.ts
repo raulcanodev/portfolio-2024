@@ -216,7 +216,7 @@ export const content: Content = {
 			name: "Generate Blog AI",
 			isActive: false,
 			description:"Next.js app with OpenAI's GPT-3 to generate blog posts.",
-			highlights: ["Next.js", "OpenAI", "Tailwind CSS"],
+			highlights: ["Next.js", "OpenAI", "Stripe", "Tailwind CSS"],
 			img: "/images/projects/blogai.png",
 			github: "https://github.com/raulcanodev/openai-api-nextjs-to-generate-blogs?tab=readme-ov-file",
 		},
