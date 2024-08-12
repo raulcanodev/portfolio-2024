@@ -204,7 +204,7 @@ export const content: Content = {
 	],
 	projects: [
 		{
-			name: "Best Template Chrome Extension",
+			name: "Best Template - Chrome Extension",
 			isActive: false,
 			description:"Effortlessly organize and manage your templates with our intuitive extension.",
 			highlights: ["React", "Chrome Extension"],
@@ -240,7 +240,7 @@ export const content: Content = {
 			img: "/images/projects/instagram-bot.jpg",
 		},
 		{
-			name: "Web Layout | Gaming News",
+			name: "Gaming News - Web Layout",
 			isActive: true,
 			description: "Web layout without external frameworks or libraries.",
 			highlights: ["HTML5", "CSS3", "JS"],
