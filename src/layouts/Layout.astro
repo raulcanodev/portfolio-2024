@@ -4,9 +4,10 @@ import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
 	description: string;
+	image?: string;
 }
 
-const { title = "Raul Cano", description = "Raul Cano's blog portfolio."} = Astro.props;
+const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=''} = Astro.props;
 ---
 
 <!doctype html>
@@ -20,6 +21,12 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio."} = Astr
 		<meta name="description" content={description} />
 		<meta name="author" content="Raul Cano" />
 		<title>{title}</title>
+
+		<!-- Open Graph metadata -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content={Astro.url} />
 	</head>
 
 	<body class="dark:bg-customBlack bg-customBlack">

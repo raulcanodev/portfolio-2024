@@ -19,7 +19,7 @@ if (entry === undefined) {
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title} description={entry.data.summary}>
+<Layout title={entry.data.title} description={entry.data.summary} image={entry.data.image}>
 	<Navbar />
 
 	<article class="blog max-w-3xl mx-auto md:px-0">
