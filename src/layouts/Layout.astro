@@ -51,7 +51,30 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 		</script>
 	</body>
 	<Footer />
+
 	<style is:global>
+  @font-face {
+    font-family: "Replica-Bold";
+    src: url('/fonts/Replica-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: "Replica";
+    src: url('/fonts/Replica.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: "Replica-Heavy";
+    src: url('/fonts/Replica-Heavy.ttf') format('truetype');
+  }
+	@font-face {
+		font-family: "DMMono";
+		src: url('/fonts/DMMono-Light.ttf') format('truetype');
+	}
+	@font-face{
+		font-family: "Lekton";
+		src: url('/fonts/Lekton-Regular.ttf') format('truetype');
+	}
 		:root {
 			--white: #ededed;
 			--dark: #181818;
@@ -66,6 +89,7 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 		html {
 			font-size: 16px;
 			font-family:
+
 			monospace,
 			Monaco,
 				Lucida Console,
@@ -73,7 +97,7 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 				Courier;
 			border-top: 3px solid var(--contrast);
 			background-color: var(--dark);
-			/* background-image: linear-gradient(
+			background-image: linear-gradient(
 					90deg,
 					rgba(5, 239, 52, 0.2) 1px,
 					transparent 1px
@@ -92,7 +116,7 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 					-45deg,
 					rgba(10, 255, 80, 0.2) 1px,
 					transparent 1px
-				); */
+				);
 			background-size:
 				20px 20px,
 				20px 20px,
@@ -151,6 +175,7 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 		h4 {
 			margin: 0;
 			font-family:
+			Replica,
 			"Segoe UI",
 			BlinkMacSystemFont,
 				"Open Sans",
@@ -161,7 +186,6 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 				Cantarell,
 				"Helvetica Neue",
 				sans-serif;
-			/* color: var(--text); */
 		}
 
 		p {
