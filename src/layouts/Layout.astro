@@ -2,205 +2,195 @@
 import "@fontsource/lekton";
 import Footer from "../components/Footer.astro";
 interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
-const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=''} = Astro.props;
+const {
+  title = "Raul Cano",
+  description = "Raul Cano's blog portfolio.",
+  image = "",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/round_profile.png" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
-		<meta name="author" content="Raul Cano" />
-		<title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/round_profile.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Raul Cano" />
+    <title>{title}</title>
 
-		<!-- Open Graph metadata -->
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={image} />
-		<meta property="og:url" content={Astro.url} />
-	</head>
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={Astro.url} />
+  </head>
 
-	<body class="dark:bg-customBlack bg-customBlack">
-		<slot />
-		<div class="cursor"></div>
-		<script>
-			// const cursor = document.querySelector(".cursor") as HTMLElement;
-			// const checkScreenSize = () => {
-			// 	if (window.innerWidth < 768) {
-			// 		cursor.style.display = "none";
-			// 	} else {
-			// 		cursor.style.display = "block";
-			// 	}
-			// };
-			// checkScreenSize();
-			// if (cursor) {
-			// 	document.addEventListener("mousemove", (e) => {
-			// 		cursor.style.left = e.pageX + "px";
-			// 		cursor.style.top = e.pageY + "px";
-			// 	});
-			// }
-		</script>
-	</body>
-	<Footer />
+  <body class="dark:bg-customBlack bg-customBlack">
+    <slot />
+    <div class="cursor"></div>
+    <script>
+      // const cursor = document.querySelector(".cursor") as HTMLElement;
+      // const checkScreenSize = () => {
+      // 	if (window.innerWidth < 768) {
+      // 		cursor.style.display = "none";
+      // 	} else {
+      // 		cursor.style.display = "block";
+      // 	}
+      // };
+      // checkScreenSize();
+      // if (cursor) {
+      // 	document.addEventListener("mousemove", (e) => {
+      // 		cursor.style.left = e.pageX + "px";
+      // 		cursor.style.top = e.pageY + "px";
+      // 	});
+      // }
+    </script>
+  </body>
+  <Footer />
 
-	<style is:global>
-  @font-face {
-    font-family: "Replica-Bold";
-    src: url('/fonts/Replica-Bold.ttf') format('truetype');
-  }
+  <style is:global>
+    @font-face {
+      font-family: "Replica-Bold";
+      src: url("/fonts/Replica-Bold.ttf") format("truetype");
+    }
 
-  @font-face {
-    font-family: "Replica";
-    src: url('/fonts/Replica.ttf') format('truetype');
-  }
+    @font-face {
+      font-family: "Replica";
+      src: url("/fonts/Replica.ttf") format("truetype");
+    }
 
-  @font-face {
-    font-family: "Replica-Heavy";
-    src: url('/fonts/Replica-Heavy.ttf') format('truetype');
-  }
-	@font-face {
-		font-family: "DMMono";
-		src: url('/fonts/DMMono-Light.ttf') format('truetype');
-	}
-	@font-face{
-		font-family: "Lekton";
-		src: url('/fonts/Lekton-Regular.ttf') format('truetype');
-	}
-		:root {
-			--white: #ededed;
-			--dark: #181818;
-			--gray: #333333;
-			--light-gray: #f5f5f5;
-			--contrast: #21c55e;
-			--background: var(--dark);
-			--text: #e7e7e7; 
-			--blog-content: #e7e7e7;
-			--lines: rgba(255, 255, 255, 0.5);
-		}
-		html {
-			font-size: 16px;
-			font-family:
-
-			monospace,
-			Monaco,
-				Lucida Console,
-				"Courier New",
-				Courier;
-			border-top: 3px solid var(--contrast);
-			background-color: var(--dark);
-			background-image: linear-gradient(
-					90deg,
-					rgba(5, 239, 52, 0.2) 1px,
-					transparent 1px
-				),
-				linear-gradient(
-					180deg,
-					rgba(12, 240, 73, 0.2) 1px,
-					transparent 1px
-				),
-				linear-gradient(
-					45deg,
-					rgba(1, 254, 1, 0.2) 1px,
-					transparent 1px
-				),
-				linear-gradient(
-					-45deg,
-					rgba(10, 255, 80, 0.2) 1px,
-					transparent 1px
-				);
-			background-size:
-				20px 20px,
-				20px 20px,
-				20px 20px,
-				20px 20px;
-			/* letter-spacing: -0.025rem; */
-			scroll-behavior: smooth;
-			/* cursor: none !important; */
-		}
-		body,
-		figure {
-			/* background: var(--dark); */
-			margin: 0;
-			padding: 0rem 6rem;
-			max-width: 1000px;
-			/* border-top: 2px solid var(--contrast); */
-			margin: 0 auto;
-			max-height: 100%;
-			min-height: 100vh;
-			/* box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
+    @font-face {
+      font-family: "Replica-Heavy";
+      src: url("/fonts/Replica-Heavy.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "DMMono";
+      src: url("/fonts/DMMono-Light.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Lekton";
+      src: url("/fonts/Lekton-Regular.ttf") format("truetype");
+    }
+    :root {
+      --white: #ededed;
+      --dark: #181818;
+      --gray: #333333;
+      --light-gray: #f5f5f5;
+      --contrast: #21c55e;
+      --background: var(--dark);
+      --text: #e7e7e7;
+      --blog-content: #e7e7e7;
+      --lines: rgba(255, 255, 255, 0.5);
+    }
+    html {
+      font-size: 16px;
+      font-family:
+        monospace,
+        Monaco,
+        Lucida Console,
+        "Courier New",
+        Courier;
+      border-top: 3px solid var(--contrast);
+      /* background-color: var(--dark);
+      background-image: linear-gradient(
+          90deg,
+          rgba(5, 239, 52, 0.2) 1px,
+          transparent 1px
+        ),
+        linear-gradient(180deg, rgba(12, 240, 73, 0.2) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(1, 254, 1, 0.2) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(10, 255, 80, 0.2) 1px, transparent 1px);
+      background-size:
+        20px 20px,
+        20px 20px,
+        20px 20px,
+        20px 20px; */
+      /* letter-spacing: -0.025rem; */
+      scroll-behavior: smooth;
+      /* cursor: none !important; */
+    }
+    body,
+    figure {
+      /* background: var(--dark); */
+      margin: 0;
+      padding: 0rem 6rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      max-height: 100%;
+      min-height: 100vh;
+      /* box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
 			-webkit-box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1);
 			-moz-box-shadow: -2px 23px 110px -25px rgba(0, 0, 0, 1); */
-			/* cursor: none; */
-			z-index: 99;
-		}
+      /* cursor: none; */
+      z-index: 99;
+    }
 
-		@media (max-width: 768px) {
-			body,
-			figure {
-				padding: 0 1rem;
-				border: none;
-				border-top: 3px solid var(--contrast);
-			}
-		}
+    @media (max-width: 768px) {
+      body,
+      figure {
+        padding: 0 1rem;
+        border: none;
+        border-top: 3px solid var(--contrast);
+      }
+    }
 
-		a {
-			text-decoration: none;
-			color: var(--text);
-			/* cursor: none; */
-		}
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-		*,
-		*::before,
-		*::after {
-			box-sizing: border-box;
-			/* cursor: none !important; */
-		}
+    a {
+      text-decoration: none;
+      color: var(--text);
+      /* cursor: none; */
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      /* cursor: none !important; */
+    }
 
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin: 0;
-			font-family:
-			Replica,
-			"Segoe UI",
-			BlinkMacSystemFont,
-				"Open Sans",
-				-apple-system,
-				Roboto,
-				Oxygen,
-				Ubuntu,
-				Cantarell,
-				"Helvetica Neue",
-				sans-serif;
-		}
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      font-family:
+        Replica,
+        "Segoe UI",
+        BlinkMacSystemFont,
+        "Open Sans",
+        -apple-system,
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Helvetica Neue",
+        sans-serif;
+    }
 
-		p {
-			color: var(--text);
-			font-size: 0, 875rem;
-			line-height: 1.5;
-			margin: 0;
-			text-wrap: pretty;
-		}
-		button {
-			/* cursor: none; */
-		}
+    p {
+      color: var(--text);
+      font-size: 0, 875rem;
+      line-height: 1.5 !important;
+      margin: 0;
+      text-wrap: pretty;
+    }
+    button {
+      /* cursor: none; */
+    }
 
-		/* CURSOR STYLES */
-		/* .cursor {
+    /* CURSOR STYLES */
+    /* .cursor {
 			position: absolute;
 			width: 20px;
 			background-color: white;
@@ -212,8 +202,8 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 			mix-blend-mode: difference;
 		} */
 
-		/* CURSOR IF YOU AD AN EMOJI IN THE CURSOR DIV */
-		/* .cursor {
+    /* CURSOR IF YOU AD AN EMOJI IN THE CURSOR DIV */
+    /* .cursor {
 			position: absolute;
 			width: 20px;
 			height: 20px;
@@ -228,8 +218,8 @@ const { title = "Raul Cano", description = "Raul Cano's blog portfolio.", image=
 			justify-content: center;
 		} */
 
-		/* p:hover ~ .cursor {
+    /* p:hover ~ .cursor {
 			transform: scale(2);
 		} */
-	</style>
+  </style>
 </html>

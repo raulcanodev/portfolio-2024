@@ -5,7 +5,7 @@ pubDate: 2024-07-18
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/big-o-notation.webp"
+image: "/thumbnails/code.webp"
 tags: ["algorithms", "big-o"]
 slug: big-o-notation
 category: "Algorithms"

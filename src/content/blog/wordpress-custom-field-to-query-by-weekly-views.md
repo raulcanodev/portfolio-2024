@@ -6,7 +6,7 @@ pubDate: 2024-07-08
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/wordpress-custom-field-to-query-by-weekly-views.webp"
+image: "/thumbnails/wordpress.webp"
 tags: ["wordpress", "php"]
 slug: wordpress-custom-field-to-query-by-weekly-views
 category: "WordPress"

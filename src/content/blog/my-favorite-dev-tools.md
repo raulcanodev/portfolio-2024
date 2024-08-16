@@ -7,7 +7,7 @@ pubDate: 2024-07-10
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/my-favorite-dev-tools.webp"
+image: "/thumbnails/code.webp"
 tags: ["life", "career", "tech"]
 slug: my-favorite-dev-tools
 category: "tools"

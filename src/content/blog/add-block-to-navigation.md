@@ -5,7 +5,7 @@ pubDate: 2024-08-12
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/add-block-to-navigation.webp"
+image: "/thumbnails/wordpress.webp"
 tags: [""]
 slug: add-block-to-navigation
 category: "WordPress"

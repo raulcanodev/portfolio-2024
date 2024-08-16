@@ -5,7 +5,7 @@ pubDate: 2024-07-23
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/remove-optgroup-in-safari.webp"
+image: "/thumbnails/js.webp"
 tags: ["jQuery", "WordPress"]
 slug: remove-optgroup-in-safari
 category: "WordPress"

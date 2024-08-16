@@ -5,7 +5,7 @@ pubDate: 2024-07-12
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/resetting-the-full-site-editor-in-wordpress.webp"
+image: "/thumbnails/wordpress.webp"
 tags: ["life", "career", "tech"]
 slug: resetting-the-full-site-editor-in-wordpress
 category: "WordPress"

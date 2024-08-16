@@ -5,7 +5,7 @@ pubDate: 2024-07-20
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/hooks-in-wordpress.webp"
+image: "/thumbnails/wordpress.webp"
 tags: [""]
 slug: hooks-in-wordpress
 category: "WordPress"

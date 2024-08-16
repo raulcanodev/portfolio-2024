@@ -5,7 +5,7 @@ pubDate: 2024-07-11
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/add-your-folder-path-to-your-file-in-visual-studio-code.webp"
+image: "/thumbnails/code.webp"
 tags: ["life", "career", "tech"]
 slug: add-your-folder-path-to-your-file-in-visual-studio-code
 category: "tools"

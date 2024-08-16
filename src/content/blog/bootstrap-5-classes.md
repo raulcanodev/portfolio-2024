@@ -5,7 +5,7 @@ pubDate: 2024-07-08
 emoji: '💻'
 author: 'Raul Cano'
 linkAuthor: 'https://x.com/raulcanodev'
-image: '/blog/bootstrap-5-classes.webp'
+image: '/thumbnails/style.webp'
 tags: ['life', 'career', 'tech']
 slug: bootstrap-5-classes
 category: 'Bootstrap 5'

@@ -5,7 +5,7 @@ pubDate: 2024-07-17
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/why-you-should-refactor-your-code.webp"
+image: "/thumbnails/code.webp"
 tags: [""]
 slug: why-you-should-refactor-your-code
 category: "Performance"

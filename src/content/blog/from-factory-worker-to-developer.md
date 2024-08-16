@@ -5,7 +5,7 @@ pubDate: 2024-07-07
 emoji: '💻'
 author: 'Raul Cano'
 linkAuthor: 'https://x.com/raulcanodev'
-image: '/blog/from-factory-worker-to-developer.webp'
+image: '/thumbnails/mindset.webp'
 tags: ['life', 'career', 'tech']
 slug: from-factory-worker-to-developer
 category: 'mindset'

@@ -5,7 +5,7 @@ pubDate: 2024-07-15
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/what-is-xss.webp"
+image: "/thumbnails/security.webp"
 tags: ["security", "tech"]
 slug: what-is-xss
 category: "security"

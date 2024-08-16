@@ -5,7 +5,7 @@ pubDate: 2024-07-20
 emoji: "💻"
 author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
-image: "/blog/should-i-go-to-a-tech-event-if-im-junior.jpeg"
+image: "/thumbnails/mindset.webp"
 tags: [""]
 slug: should-i-go-to-a-tech-event-if-im-junior
 category: "Mindset"
