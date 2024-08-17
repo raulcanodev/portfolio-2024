@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import PreviewImagen from '@/components/blog/PreviewImagen.astro';
+import PreviewImagen from '@/components/blog/PreviewBlog.astro';
 import Navbar from '@/components/Navbar.astro';
 import { getCollection } from 'astro:content';
 import Pagination from '@/components/blog/Pagination.astro';
@@ -59,25 +59,28 @@ if (currentPage > totalPages) {
 <Layout title="Blog | Raul Cano" description="Raul Cano's Blog page">
   <Navbar />
 
-  <SearchForm />
-
+  
   <div class="blogs-container md:mt-10">
+    
     <form class="mb-3" id="category-form" method="get" action="/blog">
       <input type="hidden" name="page" value={currentPage} />
       <select
-        id="category-select"
-        name="category"
-        onchange="document.getElementById('category-form').submit()">
-        <option value="all">All</option>
-        {
-          allCategories.map((category) => (
-            <option value={category} selected={category === selectedCategory}>
+      class="text-gray-600 p-1"
+      id="category-select"
+      name="category"
+      onchange="document.getElementById('category-form').submit()">
+      <option value="all">All</option>
+      {
+        allCategories.map((category) => (
+          <option value={category} selected={category === selectedCategory}>
               {category}
             </option>
           ))
         }
       </select>
     </form>
+    
+    <SearchForm />
     {
       blogsForPage.map((post: any) => (
         <PreviewImagen

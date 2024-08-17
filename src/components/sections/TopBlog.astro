@@ -3,7 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Section from '@/components/Section.astro';
-import PreviewNoImg from '../blog/PreviewNoImg.astro';
+import PreviewBlogHome from '../blog/PreviewBlogHome.astro';
 
 const allBlog: CollectionEntry<'blog'>[] = await getCollection('blog');
 
@@ -24,7 +24,7 @@ const lastTwoPostsByDate = sortPostsByDate.slice(2, 4);
     <div class="w-full md:w-2/4 flex justify-between flex-col">
       {
         lastPostByDate.map((post) => (
-          <PreviewNoImg
+          <PreviewBlogHome
             descriptionLength={100}
             summary={post.data.summary}
             title={post.data.title}
@@ -44,7 +44,7 @@ const lastTwoPostsByDate = sortPostsByDate.slice(2, 4);
     <div class="w-full md:w-2/4 flex justify-between flex-col">
       {
         lastTwoPostsByDate.map((post) => (
-          <PreviewNoImg
+          <PreviewBlogHome
             descriptionLength={100}
             summary={post.data.summary}
             title={post.data.title}
