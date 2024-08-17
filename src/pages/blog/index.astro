@@ -4,6 +4,7 @@ import PreviewImagen from '@/components/blog/PreviewImagen.astro';
 import Navbar from '@/components/Navbar.astro';
 import { getCollection } from 'astro:content';
 import Pagination from '@/components/blog/Pagination.astro';
+import SearchForm from '@/components/blog/SearchForm.astro';
 import { POSTS_PER_PAGE } from '@/constants';
 
 // Get the current parameters from the URL
@@ -57,6 +58,9 @@ if (currentPage > totalPages) {
 
 <Layout title="Blog | Raul Cano" description="Raul Cano's Blog page">
   <Navbar />
+
+  <SearchForm />
+
   <div class="blogs-container md:mt-10">
     <form class="mb-3" id="category-form" method="get" action="/blog">
       <input type="hidden" name="page" value={currentPage} />
