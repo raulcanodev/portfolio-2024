@@ -212,8 +212,8 @@ export const content: Content = {
       description: "Next.js app with OpenAI's GPT-3 to generate blog posts.",
       highlights: ['Next.js', 'OpenAI', 'Stripe', 'Tailwind CSS'],
       img: '/images/projects/blogai.png',
-      github:
-        'https://github.com/raulcanodev/openai-api-nextjs-to-generate-blogs?tab=readme-ov-file',
+      github:'https://github.com/raulcanodev/openai-api-nextjs-to-generate-blogs?tab=readme-ov-file',
+      youtube: 'https://youtu.be/Mhe_9a4pd60',
     },
     {
       name: "Forum 'ForoGeeks'",
