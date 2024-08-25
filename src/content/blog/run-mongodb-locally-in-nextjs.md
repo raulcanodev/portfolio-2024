@@ -11,6 +11,7 @@ slug: run-mongodb-locally-in-nextjs
 category: "MongoDB"
 ---
 
+
 Mac M2 Sonoma | Next.js 14.2.6 | MongoDB 7.0
 
 ## 1. Install MongoDB with Homebrew
