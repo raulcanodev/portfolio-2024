@@ -1,6 +1,6 @@
 ---
 title: "Setting up MongoDB locally in a Next.js project [Mac]"
-summary: "We will see how to install MongoDB locally in a Next.js project on a Mac. It is important to have your Next.js project already created."
+summary: "We will see how to install MongoDB locally and add the MONGODB_URI to a Next.js project on a Mac. It is important to have your Next.js project already created.
 pubDate: 2024-08-25
 emoji: "💻"
 author: "Raul Cano"
