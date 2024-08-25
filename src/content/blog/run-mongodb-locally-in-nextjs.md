@@ -117,16 +117,15 @@ Ok so now we have MongoDB installed and running on our Mac. We need to add the M
 mongosh
 ```
 
-You will see the MongoDB shell prompt of the step 4. `Copy` the "Connecting to"
+You will see the MongoDB shell prompt of the step 4. `copy` the "Connecting to" value.
 
 ```bash
-Connecting to:		mongodb://127.0.0.1:27017/...
+Connecting to: mongodb://127.0.0.1:27017/...
 ```
 
 Go to Next.js and paste it in your `.env.local` file in your Next.js project.
 
 ```json
-// .env.local
 MONGODB_URI=mongodb://127.0.0.1:27017/...
 ```
 
