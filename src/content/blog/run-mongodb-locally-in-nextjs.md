@@ -87,7 +87,7 @@ db.myNewCollection.insertOne({ name: 'Raul', age: 30 })
 db.myNewCollection.find()
 ```
 
-## `Note` Keep this in mind before going to the next step
+## `Note:` Keep this in mind before going to the next step
 
 - You can have multiple databases in MongoDB.
 - Each database can have multiple collections.
