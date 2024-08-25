@@ -69,6 +69,8 @@ Mongo places your data in the `test` (`test>`) database  by default. If you want
 
 ## 5. Create a new collection
 
+We are going to test the connection in the terminal with a new collection called `myNewCollection`.
+
 ```bash
 db.createCollection('myNewCollection')
 ```
@@ -85,20 +87,29 @@ db.myNewCollection.insertOne({ name: 'Raul', age: 30 })
 db.myNewCollection.find()
 ```
 
-## How to Stop MongoDB service 
-(Do not forget to stop the service when you are done)
+## Keep this in mind before going to the next step
+
+- You can have multiple databases in MongoDB.
+- Each database can have multiple collections.
+- Each collection can have multiple documents.
+
+The structure is like this:
 
 ```bash
-brew services stop mongodb-community@7.0
+Database
+  Collection
+    Document
 ```
-`Reestart` MongoDB service:
 
-```bash
-brew services restart mongodb-community@7.0
-```
+The `Database` is the top-level container for our data. It is the container for collections. The `Collection` is a group of documents. The `Document` is a set of key-value pairs that you might be manipulating them with mongoose in your Next.js project.
+
+In the terminal when you run `mongosh` normally you are in the `test` database, thats why you see the `test>` prompt. So then all the commands you run are in the `test` database.
+
 ---
 
 ## 8. Add the MongoDB URI to Next.js .env.local file
+
+Ok so now we have MongoDB installed and running on our Mac. We need to add the MongoDB URI to our Next.js project.
 
 ```bash
 mongosh
@@ -118,6 +129,8 @@ MONGODB_URI=mongodb://127.0.0.1:27017/...
 ```
 
 ## 9. Test the connection
+
+You can forget the previous collection we created in the terminal.
 
 Run your Next.js project with `npm run dev` and test the connection with MongoDB, you first need to submit a form or make a request to the database, like registering a new user.
 
@@ -140,11 +153,23 @@ db.users.find().pretty()
 
 Here we are inside the DB `test` and the collection `users`. You should see the new user you just registered.
 
-Make sure you are in the correct database and collection.
-
+Make sure you are in the correct database and collection otherwise you will not see the new user.
 
 ---
 
+## How to Stop MongoDB service 
+(Do not forget to stop the service when you are done)
+
+```bash
+brew services stop mongodb-community@7.0
+```
+`Reestart` MongoDB service:
+
+```bash
+brew services restart mongodb-community@7.0
+```
+
+---
 
 ### References
 [MongoDB Doc](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
