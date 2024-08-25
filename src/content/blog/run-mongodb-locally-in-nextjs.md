@@ -148,4 +148,4 @@ Make sure you are in the correct database and collection.
 
 
 ### References
-https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+[MongoDB Doc](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
