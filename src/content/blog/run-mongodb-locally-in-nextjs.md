@@ -1,6 +1,6 @@
 ---
 title: "Setting up MongoDB locally in a Next.js project [Mac]"
-summary: "We will see how to install MongoDB locally and add the MONGODB_URI to a Next.js project on a Mac. It is important to have your Next.js project already created.
+summary: "We will see how to install MongoDB locally and add the MONGODB_URI to a Next.js project on a Mac. It is important to have your Next.js project already created."
 pubDate: 2024-08-25
 emoji: "💻"
 author: "Raul Cano"
@@ -67,20 +67,19 @@ By default you should see some databases like `admin`, `config`, `local`, `test`
 Mongo places your data in the `test` (`test>`) database  by default. If you want to create a new database, you can do it with the `use` command + the name of the database.
 
 
-
 ## 5. Create a new collection
 
 ```bash
 db.createCollection('myNewCollection')
 ```
 
-## 7. Insert a new document
+## 6. Insert a new document
 
 ```bash
 db.myNewCollection.insertOne({ name: 'Raul', age: 30 })
 ```
 
-## 8. Query all documents
+## 7. Query all documents
 
 ```bash
 db.myNewCollection.find()
@@ -99,7 +98,7 @@ brew services restart mongodb-community@7.0
 ```
 ---
 
-## 9. Add the MongoDB URI to Next.js .env.local file
+## 8. Add the MongoDB URI to Next.js .env.local file
 
 ```bash
 mongosh
@@ -118,7 +117,7 @@ Go to Next.js and paste it in your `.env.local` file in your Next.js project.
 MONGODB_URI=mongodb://127.0.0.1:27017/...
 ```
 
-## 10. Test the connection
+## 9. Test the connection
 
 Run your Next.js project with `npm run dev` and test the connection with MongoDB, you first need to submit a form or make a request to the database, like registering a new user.
 
