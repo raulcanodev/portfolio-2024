@@ -105,6 +105,8 @@ The `Database` is the top-level container for our data. It is the container for 
 
 In the terminal when you run `mongosh` normally you are in the `test` database, thats why you see the `test>` prompt. So then all the commands you run are in the `test` database.
 
+So when you run `test> db.myNewCollection.find()` you are querying the `myNewCollection` collection in the `test` database.
+
 ---
 
 ## 8. Add the MongoDB URI to Next.js .env.local file
