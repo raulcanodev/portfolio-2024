@@ -63,11 +63,8 @@ show dbs
 ```
 By default you should see some databases like `admin`, `config`, `local`, `test`.
 
-Mongo places your data in the `test` (`test>`) database  by default. If you want to create a new database, you can do it with the `use` command.
+Mongo places your data in the `test` (`test>`) database  by default. If you want to create a new database, you can do it with the `use` command + the name of the database.
 
-```bash
-use myNewDatabase
-```
 
 
 ## 5. Create a new collection
