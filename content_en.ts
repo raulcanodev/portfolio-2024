@@ -188,6 +188,7 @@ export const content: Content = {
     { name: 'PHP' },
     { name: 'Astro' },
     { name: 'Next.js' },
+    { name: 'MongoDB' },
     { name: 'Python' },
   ],
   languages: [
