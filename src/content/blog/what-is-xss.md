@@ -15,10 +15,7 @@ category: "security"
 
 XSS (Cross-Site Scripting) is a type of security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. These scripts can be used to steal sensitive information, such as cookies, session tokens, or other personal data. XSS attacks can be classified into three main types:
 
-**- Stored XSS**: The attacker injects a malicious script into a web page, which is then stored on the server and executed whenever a user visits the page.
-
-**- How do they inject the script?**
-They can do it through a comment form, a search bar, or any other input field that allows user input.
+**- Stored XSS**: The attacker injects a malicious script into a web page, which is then stored on the server and executed whenever a user visits the page. (They can do it through a comment form, a search bar, or any other input field that allows user input.)
 
 **- Reflected XSS**: The attacker injects a malicious script into a URL, which is then reflected back to the user and executed by the browser.
 
