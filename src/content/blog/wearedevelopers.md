@@ -8,7 +8,7 @@ linkAuthor: "https://x.com/raulcanodev"
 image: "/thumbnails/mindset.webp"
 tags: [""]
 slug: should-i-go-to-a-tech-event-if-im-junior
-category: "Mindset"
+category: "mindset"
 ---
 
 ## Attending WeAreDevelopers 2024
