@@ -198,6 +198,15 @@ export const content: Content = {
   ],
   projects: [
     {
+      name: 'Cvpage',
+      isActive: false,
+      description:
+        'Allowing users to create an online CV with a custom domain and a variety of styles.',
+      highlights: ['Next.js', 'Tailwind CSS', 'MongoDB'],
+      img: '/images/projects/cvpage.png',
+      url: 'https://cvpage.to',
+    },
+    {
       name: 'Best Template - Chrome Extension',
       isActive: false,
       description:
