@@ -32,9 +32,10 @@ const { name, label, summary, summary2 } = content.basics;
 
 <section class="mb-[4rem] md:mt-10">
 	<div
-		class="flex flex-col items-center md:flex-row gap-5 md:gap-7">
-		<div class="order-2 md:order-1 flex justify-center items-center">
-			<div class="w-[6rem] h-[6rem] relative">
+		class="flex items-center flex-row gap-5 md:gap-7">
+		
+		<div class="order-1 flex justify-center items-center">
+			<div class="w-[5rem] h-[5rem] relative">
 				<img
 					class="w-full h-full object-cover rounded-full transition-all hover:rotate-45"
 					src="/round_profile.png"
@@ -43,18 +44,19 @@ const { name, label, summary, summary2 } = content.basics;
 			</div>
 		</div>
 
-		<div class="order-1 md:order-2 flex flex-col">
+		<div class="order-2 flex flex-col">
 			<div class="flex flex-col">
 				<h1
-					class="text-4xl font-bold text-center md:text-left uppercase dark:text-green-500 text-green-500">
+					class="text-3xl font-bold text-left uppercase dark:text-green-500 text-green-500">
 					{name}
 				</h1>
 				<h2
 					id="label"
-					class="text-xl mt-3 uppercase font-bold text-center md:text-left text-white dark:text-white min-h-[2rem]">
+					class="text-lg mt-1 uppercase font-bold text-left text-white dark:text-white min-h-[2rem]">
 				</h2>
 			</div>
 		</div>
+
 	</div>
 </section>
 <div class="mt-0">
