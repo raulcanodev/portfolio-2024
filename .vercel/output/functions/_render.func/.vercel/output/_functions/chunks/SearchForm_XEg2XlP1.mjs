@@ -1,7 +1,7 @@
 import { m as createComponent, n as renderTemplate, o as maybeRenderHead, p as addAttribute, q as createAstro } from './astro/server_Cmaf0c94.mjs';
 import 'kleur/colors';
 import 'clsx';
-import { a as getEntry } from './Navbar_Cvm8krtb.mjs';
+import { a as getEntry } from './Navbar_Cymb08Mv.mjs';
 /* empty css                         */
 
 const $$Astro = createAstro();

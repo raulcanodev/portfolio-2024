@@ -2,7 +2,7 @@
 import { m as createComponent, n as renderTemplate, t as renderComponent, q as createAstro, o as maybeRenderHead, p as addAttribute } from './astro/server_Cmaf0c94.mjs';
 import 'kleur/colors';
 import { $ as $$Layout } from './Layout_BfBcB-iD.mjs';
-import { a as getEntry, $ as $$Navbar } from './Navbar_Cvm8krtb.mjs';
+import { a as getEntry, $ as $$Navbar } from './Navbar_Cymb08Mv.mjs';
 /* empty css                          */
 
 function formatDate(date) {

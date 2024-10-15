@@ -3,7 +3,7 @@ import { m as createComponent, n as renderTemplate, o as maybeRenderHead, u as r
 import 'kleur/colors';
 import { c as content, a as $$GitHub, $ as $$Layout } from './Layout_BfBcB-iD.mjs';
 import 'clsx';
-import { a as getEntry, g as getCollection, $ as $$Navbar } from './Navbar_Cvm8krtb.mjs';
+import { a as getEntry, g as getCollection, $ as $$Navbar } from './Navbar_Cymb08Mv.mjs';
 /* empty css                         */
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
