@@ -7,7 +7,7 @@ author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
 image: "/thumbnails/security.webp"
 tags: ["security", "tech"]
-slug: what-is-xss
+slug: what-is-xss-delete
 category: "security"
 ---
 
