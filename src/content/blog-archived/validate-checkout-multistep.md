@@ -7,7 +7,7 @@ author: "Raul Cano"
 linkAuthor: "https://x.com/raulcanodev"
 image: "/thumbnails/code.webp"
 tags: [""]
-slug: example
+slug: validate-checkout-in-multistep-woocommerce-checkout
 category: "example"
 ---
 
