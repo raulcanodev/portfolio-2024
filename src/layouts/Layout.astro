@@ -1,6 +1,6 @@
 ---
-import '@fontsource/lekton';
-import Footer from '../components/Footer.astro';
+import "@fontsource/lekton";
+import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   description?: string;
@@ -8,39 +8,31 @@ interface Props {
 }
 
 const {
-  title = 'Raul Cano',
+  title = "Raul Cano",
   description = "Raul Cano's blog portfolio.",
-  image = '',
+  image = "",
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/round_profile.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="author" content="Raul Cano" />
-    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL} />
+    <!-- Open Graph metadata -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={Astro.url} />
   </head>
 
   <body class="dark:bg-customBlack bg-customBlack">
@@ -68,26 +60,26 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <style is:global>
     @font-face {
-      font-family: 'Replica-Bold';
-      src: url('/fonts/Replica-Bold.ttf') format('truetype');
+      font-family: "Replica-Bold";
+      src: url("/fonts/Replica-Bold.ttf") format("truetype");
     }
 
     @font-face {
-      font-family: 'Replica';
-      src: url('/fonts/Replica.ttf') format('truetype');
+      font-family: "Replica";
+      src: url("/fonts/Replica.ttf") format("truetype");
     }
 
     @font-face {
-      font-family: 'Replica-Heavy';
-      src: url('/fonts/Replica-Heavy.ttf') format('truetype');
+      font-family: "Replica-Heavy";
+      src: url("/fonts/Replica-Heavy.ttf") format("truetype");
     }
     @font-face {
-      font-family: 'DMMono';
-      src: url('/fonts/DMMono-Light.ttf') format('truetype');
+      font-family: "DMMono";
+      src: url("/fonts/DMMono-Light.ttf") format("truetype");
     }
     @font-face {
-      font-family: 'Lekton';
-      src: url('/fonts/Lekton-Regular.ttf') format('truetype');
+      font-family: "Lekton";
+      src: url("/fonts/Lekton-Regular.ttf") format("truetype");
     }
     :root {
       --white: #ededed;
@@ -106,10 +98,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         monospace,
         Monaco,
         Lucida Console,
-        'Courier New',
+        "Courier New",
         Courier;
       border-top: 3px solid var(--contrast);
-      background-color: #282a36;
+      background-color: #282A36;
       /* background-image: linear-gradient(
           90deg,
           rgba(5, 239, 52, 0.2) 1px,
@@ -176,15 +168,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       margin: 0;
       font-family:
         Replica,
-        'Segoe UI',
+        "Segoe UI",
         BlinkMacSystemFont,
-        'Open Sans',
+        "Open Sans",
         -apple-system,
         Roboto,
         Oxygen,
         Ubuntu,
         Cantarell,
-        'Helvetica Neue',
+        "Helvetica Neue",
         sans-serif;
     }
 
