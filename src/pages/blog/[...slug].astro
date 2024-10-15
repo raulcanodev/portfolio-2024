@@ -48,7 +48,7 @@ const imageUrl = entry.data.image ? new URL(`/images/${entry.data.image}`, Astro
 <Layout
   title={entry.data.title}
   description={entry.data.summary}
-  image={imageUrl?.toString()}>
+  image={entry.data.image}>
   <div
     id="copy-alert"
     class="fixed top-0 left-0 w-full bg-green-500 text-white text-center py-2 hidden z-50">
