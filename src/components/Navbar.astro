@@ -38,10 +38,7 @@ const currentPath = Astro.url.pathname;
         <a
           href="/#contact"
           class={`font-sans font-bold sm:text-base
-            ${
-              currentPath === "/#contact"
-                ? "dark:text-white text-white underline underline-offset-8"
-                : "dark:text-white"
+            ${currentPath === "/#contact" ? "dark:text-white text-white underline underline-offset-8" : "dark:text-white text-white"
             } 
             hover:underline underline-offset-8 
             hover:text-green-500 uppercase text-white`}
