@@ -217,6 +217,15 @@ export const content: Content = {
       github: 'https://github.com/raulcanodev/best-template-chrome-extension',
     },
     {
+      name: 'Scrum Timer Online',
+      isActive: false,
+      description:
+        'A simple and easy-to-use Scrum timer for your daily standups.',
+      highlights: ['Next.js', 'Tailwind CSS'],
+      img: '/images/projects/scrumtimer.png',
+      url: 'https://scrumtimer.online',
+    },
+    {
       name: 'Generate BlogAI - OpenAI',
       isActive: false,
       description: "Next.js app with OpenAI's GPT-3 to generate blog posts.",
