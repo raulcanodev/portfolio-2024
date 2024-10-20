@@ -47,3 +47,4 @@ Here is the code:
 ```
 And ta da!
 
+[Next Auth documentation](https://next-auth.js.org/configuration/providers/oauth#allowdangerousemailaccountlinking-option)
