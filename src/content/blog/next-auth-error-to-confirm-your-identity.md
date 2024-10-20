@@ -10,6 +10,7 @@ tags: ['']
 slug: next-auth-error-to-confirm-your-identity-sign-in-with-the-same-account-you-used-originally
 category: 'NextJS'
 ---
+Next.js 14
 
 I encountered this error when I was building my first Next.js project with Next Auth, and as I was getting crazy with it, I decided to write to don't forget it.
 
@@ -21,7 +22,7 @@ In the case I'm mentioning, the error is due to the fact we want the user to be 
 
 But why?
 
-Well lets imagine that a user signs in with the Google provider. He will have is own account and blablabla.
+Well lets imagine that a user signs in with the Google provider, he will have is own account and blablabla.
 
 Now what if the same user signs in with the email provider? He will have another account, and this is not what we want. We want the user to have only one account, no matter how he signs in.
 
@@ -34,6 +35,8 @@ The solution is to add an option to allow this behavior. This is done by adding 
 Here is the code:
 
 ```typescript
+// @/lib/auth.ts in my case
+
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
