@@ -1,7 +1,7 @@
 ---
 title: 'Next Auth error: To confirm your identity, sign in with the same account you used originally.'
 summary: 'Maybe you want to use a email provider and Google at the same time.'
-pubDate: 2099-01-30
+pubDate: 2024-10-20
 emoji: '💻'
 author: 'Raul Cano'
 linkAuthor: 'https://x.com/raulcanodev'
