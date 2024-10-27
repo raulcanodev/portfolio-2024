@@ -73,10 +73,8 @@ export const content: Content = {
   basics: {
     name: 'Raul Cano',
     label: 'IS A DEVELOPER',
-    summary:
-      'Full Stack Developer at WidgiLabs, where I create WordPress plugins that empower clients to customize their websites directly through the CMS. My work involves developing features with PHP and React, and designing frontend previews with CSS, HTML, PHP, and JavaScript.',
-    summary2:
-      "My mother says that I developed this love for programming because when I was a child, I always played with Legos, and this is like digital Legos for adults, maybe she's right.",
+    summary:'Full Stack Developer at WidgiLabs, where I create WordPress plugins that empower clients to customize their websites directly through the CMS, mainly using PHP, JavaScript, and React.',
+    summary2:"Some people think I'm a workaholic for working even after hours, but it's just my relationship with Next.js so what's the problem? :/",
     picture: 'https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg',
     email: 'rawraul@outlook.com',
     url: 'https://raulcano.dev',
