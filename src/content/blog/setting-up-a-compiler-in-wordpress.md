@@ -134,6 +134,7 @@ mytheme/
 ├── package.json
 ├── package-lock.json
 ├── functions.php
+├── vite.config.mjs
 └── style.css
 ```
 
@@ -201,6 +202,7 @@ mytheme/
 ├── package.json
 ├── package-lock.json
 ├── functions.php
+├── vite.config.mjs
 └── style.css
 ```
 ## Enqueue CSS in functions.php
