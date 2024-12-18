@@ -76,7 +76,7 @@ export const content: Content = {
     summary:'Full Stack Developer at WidgiLabs, where I create WordPress plugins that empower clients to customize their websites directly through the CMS, mainly using PHP, JavaScript, and React.',
     summary2:"Some people think I'm a workaholic for working even after hours, but it's just my relationship with Next.js so what's the problem? :/",
     picture: 'https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg',
-    email: 'rawraul@zenex.dev',
+    email: 'raul@zenex.dev',
     url: 'https://raulcano.dev',
     domain: 'raulcano.dev',
     phone: '+34 666 666 666',
